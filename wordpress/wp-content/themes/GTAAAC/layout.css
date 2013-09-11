@@ -1,0 +1,149 @@
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+----------------------------------------------------------------------------------------*/
+
+#main { /*H added this */
+	float: left;
+	margin: 0;
+	max-width:65%;} 
+
+#navigation-utility ul {
+	float:right;
+	font: 1.1em/1.18181818182em 'Francois One', sans-serif;
+	margin: .5em 0 1.18181818182em 0; 
+	list-style-image: none;
+	padding-top: 65px;}
+
+#navigation-main {
+	max-width: 60.625em;
+	height: 35px;
+	margin: 30px auto;}
+
+
+#navigation-utility li, #navigation-main li {
+	display: inline; }
+	
+#navigation-utility ul li a {
+	text-transform: uppercase;
+	text-decoration:none;  
+	margin: 0;
+	padding: 15px; 
+	color: #696968;}
+
+#navigation-utility ul li a:hover {
+	color: #999997;}
+	
+#navigation-main ul {
+	float:left;
+	font: 1em/1.3em 'Francois One', sans-serif;
+	list-style-image: none;
+	margin: 0.55em 0em 1.3em 0em; }
+	
+#navigation-main ul li a {
+	text-transform: uppercase;
+	text-decoration:none;  
+	margin: 0;
+	padding: 0 .9em 0 .9em;
+	color: #f8f2f2;
+	/*text-shadow: 1px 1px 1px #000;*/
+	/*-moz-text-shadow: 1px 1px 1px #000;*/
+	/* For IE 8 */
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000')";*/
+	/* For IE 5.5 - 7 */
+	/*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000');*/}
+
+#navigation-main ul li a:hover, #navigation-main ul li a:active {
+	color: #504343;
+	background: #b99f91;
+	text-align: center;
+	text-shadow: none;
+	-webkit-border-radius: .3em; 
+	-moz-border-radius: .3em;
+	border-radius: .3em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);}
+
+
+aside {
+  float: right;
+  clear: right;
+  width:18.75em;
+  /*margin-top:-12.5em; H Commented out*/
+  height:auto;}
+
+.search-container {
+	width:158px;
+	height:38px;
+	background-image:url('/wp-content/themes/gtaaac/images/searchbox.gif');
+	background-repeat:no-repeat; /*important*/
+	padding:0;
+	margin: 65px 0 0 .938em;
+	position:relative;}
+	
+.search-container form { display:inline ; }
+
+.searchbox {
+	border:0px; /*important*/
+	background-color:transparent; /*important*/
+	position:absolute; /*important*/
+	top:0px;
+	left:9px;
+	width:158px;
+	height:38px;
+	font: 1em/1.3em 'Francois One', sans-serif;
+	color: #696968;}
+	
+.searchbox_submit {
+	border:0px; /*important*/
+	background-color:transparent; /*important*/
+	position:absolute; /*important*/
+	top:4px;
+	left:120px;
+	width:35px;
+	height:32px;}
+
+.footer-column-wide {
+	float: left;
+	margin-right: 3.75em; /*60px*/
+	padding-top: 15px;
+	width: 25em; /*400px*/} 
+	
+.footer-column { 
+	float: left;
+	margin-right: 3.75em;
+	padding-top: 15px;
+	width: 12.5em;}
+
+.footer-column-last { 
+	float: left;
+	padding-top: 15px;
+	width: 12.5em;}
+
+
+nav .dropdown {
+  display: none;
+}
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+/*#container,*/ .container-footer { width: 30em;}
+
+aside {
+  float: none;
+  width: auto;
+  height: auto;
+  margin: 0 0 2.2em;}
+
+nav .dropdown { display: inline-block; }
+nav ul { display: none;}
+
+
+.footer-column-wide, .footer-column, .footer-column-last  {
+	float: none;
+	margin: 0 auto;
+	width: 30em;} 
+	
+} /*end } media*/  
+

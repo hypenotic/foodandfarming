@@ -1,0 +1,388 @@
+/*
+
+H COMBINED 2 GLOBAL STYLE SHEETS HERE
+
+Goldilocks Approach to Responsive Web Design Boilerplate
+
+Author: Design by Front - @designbyfront
+Version: 0.1
+URL: http://www.goldilocksapproach.com
+----------------------------------------------------------------------------------------
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+1. ROOT
+2. CORE TYPOGRAPHY
+3. LINKS
+4. BROWSER AND NON-SEMANTIC STYLING
+5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+
+CONTENTS - LAYOUT.CSS
+-----------------------------------------
+7. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+8. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+
+*/
+
+/* 1. ROOT
+----------------------------------------------------------------------------------------*/
+html { 
+	overflow-y: scroll;
+	background: #fff; }
+
+/* /ht Ethan Marcotte - http://front.ie/l8rJaA */
+img, embed, object, video { 
+	max-width: 100%; }
+
+.ie6 img.full, .ie6 object.full, .ie6 embed, .ie6 video { 
+	width: 100%; }
+
+img.alignleft, img.alignnone {
+	float:left;
+	padding: 1em 1em 1em 0;}
+
+img.aligncenter {
+	padding: 1em 0 3em 0;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;}
+
+img.alignright {
+	float:right;
+	padding: 1em 0 1em 1em;}
+
+
+/* 2. CORE TYPOGRAPHY - set baseline = default (body) line-height/font-size
+----------------------------------------------------------------------------------------*/
+body {
+	font: 1em/1.3em "Arial"; /* 16px/24px */
+	color: #707070;
+	margin-bottom: 1.3em; }
+
+h1, h2, h3, h5, h6 {
+	color: #0068b3;
+	text-align: left; }
+
+h4 {
+	color: #707070;}
+
+p, ul, ol, dl, blockquote {
+	font-size: 0.9em;
+	line-height: 1.4444em;
+	margin-bottom: 1.4444em;
+	/*max-width: 30em; 30em is optimal width for long-form text SCREWS UP ADMIN BAR WHEN LOGGED INTO WORDPRESS*/ }
+
+ul, ol {
+	text-align:left;}
+
+small { 
+	font-size: 80%;}
+
+aside ul {
+	margin: 0; 
+	padding: 0;  
+	font-size: 0.8em; 
+	line-height: 1.625em;}
+
+aside li {
+	list-style: none; 
+	margin: 0 0 1.625em 0;}
+
+aside li a, .follow {
+	text-decoration: none;}
+
+aside h3 {
+	text-transform: none; 
+	letter-spacing: 0;}
+
+aside p {
+	font-size: 0.8em; 
+	line-height: 1.625em; 
+	margin-bottom: 1.625em;}
+
+ul, li { 
+	list-style: disc; 
+	margin: 0 0 1.3em 1.618em; }
+ol { 
+	list-style-type: decimal; 
+	margin-left: 1.618em; }
+
+/* The container wrapping ul.dropdown */
+
+#navwrap {
+	float:left;
+	width:100%;
+	border-top:1px solid #ccc; }
+ 
+/* Top level Unordered list */
+
+ul.dropdown {
+	margin: 0; 
+	padding: 0.5em 0 0.4em 0;
+	list-style:none;
+	float:left;
+	width:100%;
+	text-transform: uppercase;}
+ 
+ul.dropdown li {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	float:left; /* makes horiz list */
+	position:relative; /* hey Submenu ULs, appear below! */}
+ 
+ul.dropdown a {
+	color: #707070; 
+	font-weight: bold;
+	text-decoration:none;
+	margin: 24px 0 14px 0;
+	padding: 0 24px 0 0;
+	line-height: 1em;}
+
+ul.dropdown a:hover {
+	color: #0068b3;}
+ 
+ul.dropdown ul li a {
+	color: #fff;}
+
+ul.dropdown ul li:hover a {
+	color: #fff; 
+	text-decoration: underline;}
+
+/* Displays the link as blocks. */
+
+ul.dropdown li ul a {
+	display:block;}
+ 
+/* sub menus!!  */
+ 
+ul.dropdown ul {
+	list-style: none;
+	margin: 0; /* Appear just below the hovering list */
+	padding: 0;
+	width:180px; /* specify the width. */
+	position:absolute; /* needed */
+	z-index:500; /* specify the order */
+	text-transform: none;}
+
+ul.dropdown ul a {
+	padding-left: 10px; 
+	font-weight: normal;}
+
+ul.dropdown li ul {
+	top:16px; /* Positioning:Calc with top level horz list height */
+	background: url(/wp-content/themes/whiteboard/images/bg-navfull.png) no-repeat;}
+ 
+ul.dropdown ul ul {
+	top:0;
+	left:100%; /* Position the sub menus to right. */}
+ 
+ul.dropdown ul li {
+	float:none; /* umm.. Appear below the previous one. mmkay? */}
+ 
+/* Drop Down! */
+ 
+/* Hide all the dropdowns (submenus) */
+ul.dropdown ul, ul.dropdown li:hover ul ul, ul.dropdown ul li:hover ul ul { 
+	display: none; }
+ 
+/* Display the submenus only when li are hovered */
+ul.dropdown li:hover ul, ul.dropdown ul li:hover ul, ul.dropdown ul li ul li:hover ul { 
+	display: block;}
+ 
+ul.dropdown li * a:hover {
+	/* Change color of links when hovered */
+	/*background: #600;*/
+	/*background: -moz-linear-gradient( top, #200, #400);*/ /* CSS 3 */
+	/*border-bottom:1px solid #900;*/
+	/*border-top:1px solid #222;*/ }
+
+#footer-menu ul {
+	margin: 0 0 2.166667em 0; 
+	padding: 2em 0 0 0; 
+	float:left; 
+	font-size: 0.6em; 
+	line-height: 2.166667em; }
+
+#footer-menu li {
+	display: inline; 
+	padding: 0 20px 0 0; 
+	text-transform: uppercase; }
+
+#footer-menu a {
+	text-decoration:none; 
+	color: #707070;}
+
+#footer-menu a:hover {
+	color: #0068b3; } /*blue*/
+
+/* 3. LINKS
+----------------------------------------------------------------------------------------*/
+a, a:visited { 
+	outline: none; 
+	color: #439BBD; 
+	text-decoration: underline; }  
+
+a:hover { 
+	text-decoration:none; }
+
+/* 4. BROWSER AND NON-SEMANTIC STYLING
+----------------------------------------------------------------------------------------*/
+.cf:before, .cf:after { 
+	content: ""; 
+	display: block; }
+
+.cf:after { 
+	clear: both; }
+
+.ie6 .cf { 
+	zoom: 1 }
+
+
+/* 5. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+----------------------------------------------------------------------------------------*/
+h3 { 
+	text-transform:uppercase; }
+
+h3, h4, h5, h6 { 
+	font-weight: bold; }
+
+#main {
+	margin-bottom: 2.8em;}
+
+#brand {
+	height: 3.375em; 
+	padding: 0 0 .8em 0;}
+
+header {
+	padding: 3.1em 0 2.3em 0; 
+	text-align:center;}
+
+header img#header-banner {
+	border-top: 1px solid #ccc; 
+	padding: 2.6em 0 0 0;}
+
+header img#header-logo {
+	float:left; 
+	margin-right: 10em;}
+
+header img#header-search {
+	float:left;}
+
+#social-container {
+	float:left; 
+	margin-right: 12em; }
+
+#social{
+	display: block;
+	width: 81px;
+	height: 17px;
+	background: url(/wp-content/themes/whiteboard/images/social-sprite.png) left top no-repeat;
+}
+
+#social li {
+	display: block; 
+	float: left;}
+
+#social li a {
+	display: block; 
+	height:17px; 
+	text-indent:-9999px;}
+
+#social li a:hover, #social li a.on { 
+	background-image: url(/wp-content/themes/whiteboard/images/social-sprite.png);}
+
+#social li.facebook a { 
+	width:19px; 
+	background-position:-0px -17px;}
+
+#social li.twitter a {
+	width:21px; 
+	background-position:-19px -17px;}
+
+#social li.linkedin a {
+	width:21px;
+	background-position:-40px -17px;}
+
+#social li.rss a {
+	width:20px;
+	background-position:-61px -17px;}
+
+.home-main {
+	margin-bottom: 2.6em;}
+
+.home-main h4 {
+	color: #0068b3; 
+	font-size: 1.5em;
+	line-height: 0.8666667em; 
+	margin-bottom: 0.866667em;}
+
+.home-main p {
+	font-size: 1em; 
+	line-height: 1.3em; 
+	margin-bottom: 1.3em;}
+
+.home-right, .home-left {
+	width: 18.125em; 
+	margin-bottom: 1.5em; 
+	padding-top: 1.3em; 
+	border-top: 1px solid #ccc;}
+
+.home-right p, .home-left p {
+	font-size: 0.9em; 
+	line-height: 1.4444em; 
+	margin-bottom: 1.4444em;}
+
+.home-sidebar {
+	padding-top: 1.5em;}
+
+footer ul, li {
+	margin: 0;}
+
+#copyright span {
+	font-size: 0.7em; 
+	color: #ccc; }
+#copyright a {
+	color: #ccc;}
+
+/* 6. CUSTOM LAYOUT & TYPOGRAPHY (Baby bear)
+----------------------------------------------------------------------------------------*/
+  
+#container {
+	padding: 0 0.809em;
+	max-width: 30em;
+	margin: auto;
+	padding: 1.618em 0.809em;
+	border-bottom: 1px solid #ccc; }
+
+#copyright {
+	padding: 0 0.809em;
+	max-width: 30em;
+	margin: auto;
+	padding: 1.618em 0.809em;}
+
+aside { 
+	width: 100%; }
+
+header h2:before {
+ 	content:"";
+	border-bottom:1px solid #333;
+	height: 1.618em;
+	width: 35%;  
+	display: block;
+	float: left; }
+
+header h2:after {
+	content:"";
+	border-bottom:1px solid #333;
+	height: 1.618em;
+	width: 35%;
+	display: block;
+	float: right; }
+
+footer {
+	max-width: 30em;
+	margin: 0 auto;
+	padding: 1.618em 0.809em;
+	border-bottom: 1px solid #e5e3e3;}

@@ -1,0 +1,84 @@
+/* 8. CUSTOM LAYOUT & TYPOGRAPHY (Daddy bear)
+----------------------------------------------------------------------------------------*/
+
+#container {
+	margin: 0 auto; 
+	max-width: 60.625em; /* 970px */
+  	border-bottom: 1px solid #ccc;
+	}
+
+header h2:before, header h2:after { width: 42%; }
+
+#main { /*H added this */
+	max-width:39.375em;
+	float: left;} 
+
+h1 { 
+	font-size: 1.5em; 
+	line-height: 0.8666667em; 
+	margin-bottom: 0.866667em; } /*set baseline: default line-height/font-size */ 
+    
+h1 span {
+  font-family: "proxima-nova-1","proxima-nova-2", arial, helvetica, sans-serif;
+  text-transform: uppercase;
+  letter-spacing:0.1em;
+  font-size:0.382em;
+  /*line-height:3.236em;*/
+  display:block;
+  }
+  
+h1 span:before, h1 span:after {
+  content:"";
+  border-top:1px solid #333;
+  height: 0.1em;
+  width: 19%;
+  display: block;
+  margin-top: 1.618em;
+  }
+  
+h1 span:before { float: left; }  
+h1 span:after { float: right; }
+
+aside {
+  float: right;
+  clear: right;
+  width:18.125em;
+  /*margin-top:-12.5em; H Commented out*/
+  height:auto;
+  }
+
+footer {
+	max-width: 60.625em;
+	border-bottom: 1px solid #e5e3e3;
+	margin: 0 auto;
+	padding: 1.618em 0.809em;}
+
+#copyright {
+	margin: 0 auto; 
+	padding: 1em 0 1em 0; 
+	max-width: 60.625em; }
+
+/* 9. CUSTOM LAYOUT & TYPOGRAPHY (Mummy bear)
+----------------------------------------------------------------------------------------*/
+@media screen and (min-width: 30em) and (max-width: 63.236em) {
+
+#container, #copyright { width: 30em; }
+
+header h2:before, header h2:after { width: 35%; }
+
+h1 span { font-size:0.5em; }
+h1 span:before, h1 span:after { width: 10%; }
+
+aside {
+  float: none;
+  width: auto;
+  height: auto;
+  margin: 0 0 2.2em;
+  }
+
+footer {
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 1.618em 0.809em;
+  }
+
