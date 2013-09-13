@@ -40,7 +40,18 @@
 		wp_enqueue_script( 'comment-reply' );
 	wp_head();
 ?>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43957423-1']);
+  _gaq.push(['_trackPageview']);
 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </head>
 <body <?php body_class($class); ?>>
 
@@ -50,10 +61,10 @@
 			<?php get_search_form();  ?>
 			<?php wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
 		</section>
-		<nav> 
-			
-			<?php wp_nav_menu( array('menu' => 'Main Menu', 'container_id' => 'navigation-main'));	?>
-			<div id="navigation-mobile">
+        <div class="main-menu">
+        	<section class="menu-block">
+			<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
+			<?php /*?><div id="navigation-mobile">
 				<ul id="nav">
 					<li><a id="toggle" href="javascript:void(0);">SECTIONS</a></li>
 						<ul id="hidden">
@@ -68,8 +79,9 @@
 						});
 						</script>
 				</ul>			
-			</div>
-		</nav>
+			</div><?php */?>
+            </section>
+        </div>
 	</header>
 	<?php if (is_home()) { ?>
 	<section id="banner" class="block">
