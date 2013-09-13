@@ -182,7 +182,9 @@ section {
 	left:9px;
 	position:absolute; /*important*/
 	top:0px;
-	width:158px;}
+	width:114px;
+	outline:none;
+}
 	
 .searchbox_submit {
 	background-color:transparent; /*important*/
