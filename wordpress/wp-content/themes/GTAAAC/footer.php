@@ -13,8 +13,10 @@
 					<div class="footer-column-last">
 						<h3>Follow Us</h3>
 						<ul>
-							<li class="facebook"><a href="https://twitter.com/#!/GTA__AAC">@GTA__AAC</a></li>
-							<li class="twitter"><a href="https://www.facebook.com/group.php?gid=110313392345265&v=wall">facebook</a></li>
+                        	<li>Food and Farming <br /> <a href="https://twitter.com/GHfoodfarming" target="_blank">@GHFoodFarming</a></li>
+                        	<li>GTAAAC <br /> <a href="https://twitter.com/GTAAgAction" target="_blank">@GTAAgAction</a></li>
+							<!--<li class="facebook"><a href="https://twitter.com/#!/GTA__AAC">@GTA__AAC</a></li>
+							<li class="twitter"><a href="https://www.facebook.com/group.php?gid=110313392345265&v=wall">facebook</a></li>-->
 						</ul>
 					</div>
 			</section>

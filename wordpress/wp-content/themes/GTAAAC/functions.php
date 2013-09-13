@@ -53,6 +53,7 @@
 	  	register_nav_menus(
 	  		array(
 	  		  'header-menu' => 'Header Menu',
+			  'main-menu' => 'Main Menu',
 	  		  'footer-menu' => 'Footer Menu'
 	  		)
 	  	);
@@ -176,12 +177,9 @@ add_action('wp_enqueue_scripts','wpexplorer_scripts_function');
 function wpexplorer_scripts_function() {
 
 // use Google JS Library
- wp_deregister_script('jquery');
- wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"), false, '1.5.0');
- wp_enqueue_script('jquery');
-
+ //wp_deregister_script('jquery');
+ //wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"), false, '1.5.0');
+ //wp_enqueue_script('jquery');
  // SuperFish Scripts
- wp_enqueue_script('superfish', get_stylesheet_directory() . '/js/superfish.js');
- wp_enqueue_script('supersubs', get_stylesheet_directory() . '/js/supersubs.js');
 }
 ?>
