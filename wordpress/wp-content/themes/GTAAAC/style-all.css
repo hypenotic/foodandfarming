@@ -273,6 +273,9 @@ footer span {
 	margin: 0 10% 0 0;
 	width: 41.23%; /*400px*/ 
 } 	
+.footer-column-wide {
+	font-size:0.9em;
+}
 .footer-column { 
 	float: left;
 	margin-right: 10%;
@@ -284,6 +287,7 @@ footer span {
 }
 .footer-column-last ul li {
 	list-style:none;
+	padding-bottom:15px;
 }
 /* 8. NAVIGATION - UTILITY
 ----------------------------------------------------------------------------------------*/
