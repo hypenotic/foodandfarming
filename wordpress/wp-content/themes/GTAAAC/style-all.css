@@ -470,8 +470,8 @@ width: 210px;
 
 @media only screen and (max-width:54em) {
 	.logo {
-		/*height: 76px;
-		width: 380px;*/
+		height: 76px;
+		width: 380px;
 		margin-bottom: 30px;
 	}
 }
@@ -502,8 +502,8 @@ width: 210px;
 		width: 100%;} 
 	
 	.logo {
-		height: 60px;
-		width: 300px;
+		/*height: 60px;
+		width: 300px;*/
 		margin-bottom: 30px;}
 	
 	.top {padding: 35px 5px 0 5px;}
