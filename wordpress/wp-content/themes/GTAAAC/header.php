@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, minimum  -scale=1.0, maximum-scale=1.0">
 <base href="<?php bloginfo('template_url'); ?>/images/">
 
-<link rel="shortcut icon" href="/link/to/favicon.ico">
+<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/images/favicon.ico">
 <link rel="apple-touch-icon" href="/link/to/apple-touch-icon.png">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
