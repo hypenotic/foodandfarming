@@ -25,7 +25,7 @@
 		</div><!--noResults-->
 	<?php endif; ?>
 		
-	<nav class="oldernewer">
+	<div class="oldernewer">
 		<div class="older">
 			<p>
 				<?php next_posts_link('&laquo; Older Entries') ?>
@@ -36,7 +36,7 @@
 				<?php previous_posts_link('Newer Entries &raquo;') ?>
 			</p>
 		</div><!--.older-->
-	</nav><!--.oldernewer-->
+	</div><!--.oldernewer-->
 	
 </div><!--/main-->
 <?php get_sidebar(); ?>
