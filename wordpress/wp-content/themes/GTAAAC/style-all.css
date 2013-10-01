@@ -383,6 +383,15 @@ width: 210px;
    border-top-color: #1b435e;
    background: #1b435e;
    }	
+.oldernewer {
+	padding:20px 0;
+}
+ .older {
+	 float:left;
+ }
+ .newer {
+	 float:right;
+ }
 
 /*------------ Uber Menu Style -----------------------*/
 #megaMenu{
@@ -540,7 +549,13 @@ width: 210px;
 		text-decoration:none;}
 	
 	#hidden {display: none;}
-	
+	.oldernewer {
+		padding:5px 0;
+	}
+	.older,.newer {
+		float:none;
+		padding:5px 0;
+	}
 }
 @media only screen and (max-width:767px)	{
 		#megaMenu{

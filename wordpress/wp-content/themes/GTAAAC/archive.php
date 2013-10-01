@@ -42,18 +42,14 @@
 		</div><!--noResults-->
 	<?php endif; ?>
 		
-	<nav class="oldernewer">
+	<div class="oldernewer">
 		<div class="older">
-			<p>
 				<?php next_posts_link('&laquo; Older Entries') ?>
-			</p>
 		</div><!--.older-->
 		<div class="newer">
-			<p>
 				<?php previous_posts_link('Newer Entries &raquo;') ?>
-			</p>
 		</div><!--.older-->
-	</nav><!--.oldernewer-->
+	</div><!--.oldernewer-->
 
 </div><!--#content-->
 <?php get_sidebar(); ?>
