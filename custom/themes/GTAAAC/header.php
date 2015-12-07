@@ -32,6 +32,9 @@
 <!-- Modernizr -->
 <script src="<?php bloginfo('stylesheet_directory'); ?>/js/libs/modernizr-1.7.min.js"></script>
 
+<!-- New Stylesheet -->
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/style.css" media="all">
+
 <?php
 	/* We add some JavaScript to pages with the comment form
 	 * to support sites with threaded comments (when in use).

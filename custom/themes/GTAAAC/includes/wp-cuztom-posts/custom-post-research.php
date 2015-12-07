@@ -5,11 +5,11 @@ $args = array(
     'supports'  => array( 'title', 'editor', 'page-attributes' ),
     'taxonomies' => array('category')  
     );
-$teampage = register_cuztom_post_type('team', $args);
+$teampage = register_cuztom_post_type('report', $args);
 
 $teampage->add_meta_box(
     'banner',
-    'Featured banner', 
+    'Hero Banner', 
     array(
         array(
             'name'          => 'image',
@@ -33,8 +33,8 @@ $teampage->add_meta_box(
 );
 
 $teampage->add_meta_box(
-    'teammember',
-    'Team Members', 
+    'Meta',
+    'Meta Display', 
     array(
         'bundle',    
             array( 
@@ -46,68 +46,9 @@ $teampage->add_meta_box(
                 ),
                 array(
                     'name'          => 'name',
-                    'label'         => 'Full Name',
+                    'label'         => 'Blurb',
                     'description'   => '',
-                    'type'          => 'text',          
-                ),
-                array(
-                    'name'          => 'creds',
-                    'label'         => 'Credentials',
-                    'description'   => '',
-                    'type'          => 'text',          
-                ),
-                array(
-                    'name'          => 'jobtitle',
-                    'label'         => 'Job Title',
-                    'description'   => '',
-                    'type'          => 'text',          
-                ),
-                array(
-                    'name'          => 'phone',
-                    'label'         => 'Phone Number & Extension',
-                    'description'   => 'Format: (xxx) xxx-xxxx ext.xxx',
-                    'type'          => 'text'
-                ),
-                array(
-                    'name'          => 'email',
-                    'label'         => 'Email',
-                    'description'   => '',
-                    'type'          => 'text'
-                ),
-                array(
-                    'name'          => 'twitter',
-                    'label'         => 'Twitter Profile URL',
-                    'description'   => '',
-                    'type'          => 'text'
-                ),
-                array(
-                    'name'          => 'linkedin',
-                    'label'         => 'LinkedIn Profile URL',
-                    'description'   => '',
-                    'type'          => 'text'
-                ),
-                array(
-                    'name'          => 'profile',
-                    'label'         => 'Profile',
-                    'description'   => 'Enter short profile.',
-                    'type'          => 'textarea',
-                ),
-                array(
-                    'name'          => 'longbio',
-                    'label'         => 'Longer Bio',
-                    'description'   => 'Enter long profile.',
-                    'type'          => 'wysiwyg',
-                ),
-                array(
-                    'name'          => 'flag',
-                    'label'         => 'Department',
-                    'description'   => '',
-                    'type'          => 'select',
-                    'options'       => array(
-                                'value1'    => 'Exec',
-                                'value2'    => 'Member'
-                            ),
-                    'default_value' => 'value1'
+                    'type'          => 'wysiwyg',          
                 )
             )
     )

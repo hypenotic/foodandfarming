@@ -178,13 +178,13 @@ function content($limit)
 	
 	
 	// scripts function
-add_action('wp_enqueue_scripts','wpexplorer_scripts_function');
-function wpexplorer_scripts_function() {
+	add_action('wp_enqueue_scripts','wpexplorer_scripts_function');
+	function wpexplorer_scripts_function() {
 
-// use Google JS Library
- //wp_deregister_script('jquery');
- //wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"), false, '1.5.0');
- //wp_enqueue_script('jquery');
- // SuperFish Scripts
-}
+	// use Google JS Library
+	 //wp_deregister_script('jquery');
+	 //wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"), false, '1.5.0');
+	 //wp_enqueue_script('jquery');
+	 // SuperFish Scripts
+	}
 ?>

@@ -1,0 +1,11 @@
+.research-hero {
+	height: 500px;	
+}
+
+.research-container--outer {
+	overflow-x: hidden;
+	@include outer-container;
+	.research-container--inner {
+		
+	}
+}
