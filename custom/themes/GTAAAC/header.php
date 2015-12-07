@@ -99,5 +99,3 @@
 		<a href="<?php echo get_option('home'); ?>"><img src="banner.jpg"></a>
 	</section>
 	<?php } ?>
-	<section class="block">
-		<div id="main" role="main">

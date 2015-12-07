@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+<section class="block">
+<div id="main" role="main">
 	<h3>Recent News</h3>
 		<?php while ( have_posts() ) : the_post() ?>
 			<article>
@@ -14,4 +16,5 @@
 		<?php endwhile; ?>
 	</div><!-- /main -->
 <?php get_sidebar(); ?>
+	</section>
 <?php get_footer(); ?>

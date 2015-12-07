@@ -1,5 +1,3 @@
-	</section>
-
 		<footer> 
 			<section class="block clear">
 					<div class="footer-column-wide">

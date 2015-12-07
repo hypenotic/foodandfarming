@@ -33,7 +33,7 @@ $teampage->add_meta_box(
 );
 
 $teampage->add_meta_box(
-    'Meta',
+    'meta',
     'Meta Display', 
     array(
         'bundle',    
@@ -49,6 +49,24 @@ $teampage->add_meta_box(
                     'label'         => 'Blurb',
                     'description'   => '',
                     'type'          => 'wysiwyg',          
+                ),
+                array(
+                    'name'          => 'downloadlink',
+                    'label'         => 'Download Link',
+                    'description'   => '',
+                    'type'          => 'text'
+                ),
+                array(
+                    'name'          => 'contacttext',
+                    'label'         => 'Contact Text',
+                    'description'   => '',
+                    'type'          => 'text'
+                ),
+                array(
+                    'name'          => 'contactlink',
+                    'label'         => 'Contact Link',
+                    'description'   => '',
+                    'type'          => 'text'
                 )
             )
     )

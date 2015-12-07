@@ -1,11 +1,29 @@
 .research-hero {
-	height: 500px;	
+	height: 500px;
+	margin: -30px 0 0 0;	
+	figure {
+		height: 100%;
+		margin: 0; 
+	}
 }
 
 .research-container--outer {
 	overflow-x: hidden;
 	@include outer-container;
 	.research-container--inner {
-		
+		@include media($bp-large) {
+			padding: 50px 0;
+			@include span-columns(8);
+			@include shift(2);
+	    }
 	}
+}
+
+.research__single {
+	padding-bottom: 20px;
+
+}
+
+.research__single:last-child {
+	padding-bottom: 0;
 }
