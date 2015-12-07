@@ -62,7 +62,7 @@
 </script>
 </head>
 <body <?php body_class($class); ?>>
-
+<div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div>
 	<header class="clear">
 		<section class="block">
 			<a href="<?php echo get_option('home'); ?>"><img class="left top logo" src="logo.png"></a>
