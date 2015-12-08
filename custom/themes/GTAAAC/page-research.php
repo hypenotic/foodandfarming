@@ -14,7 +14,7 @@
 		<div class="research-hero">
 		    <figure style="background-image: url('https://images.unsplash.com/24/SAM_0551.JPG'); background-size: cover; background-position: center center;"></figure>
 		    <div class="animated fadeInDown">
-		        <h1>Heading</h1>
+		        <h1>Lorem ipsum dolor sit amet</h1>
 		    </div>
 		</div>
 
@@ -33,7 +33,7 @@
 							$contactL     = get_post_meta( $post->ID, '_meta_contactlink', true );
 						?>
 				
-						<div class="research__single">
+						<div class="research__single wow fadeIn">
 							<!-- <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a> -->
 							<div class="research__single__bottom">
 								<div class="research__single__image">
@@ -50,6 +50,11 @@
 												Download Report
 											</button>
 										</a>
+										<a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo urlencode(the_permalink()); ?>&via=GHfoodfarming&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">
+											<button class="right-button" alt="Tweet This Report">
+												<i class="fa fa-twitter"></i>
+											</button>
+										</a>
 									</div>
 								</div>
 							</div>
@@ -60,8 +65,8 @@
 		</div>
 
 		<section class="research__cta">
-			<h2>If you want to learn more about any of these projects...</h2>
-			<a href=""><button> get in touch</button></a>
+			<h2 class="wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s">If you want to learn more about any of our projects...</h2>
+			<a href="<?php echo home_url(); ?>/contact"><button class="wow fadeInDown" data-wow-duration="0.5s" data-wow-delay="0.5s"> get in touch</button></a>
 		</section>
 	
 	<?php endwhile; else : ?>

@@ -1,7 +1,7 @@
 <?php //Connect CPT
 $args = array(
     'has_archive' => true,
-    'menu_icon' => 'dashicons-groups', //http://melchoyce.github.io/dashicons/
+    'menu_icon' => 'dashicons-welcome-write-blog', //http://melchoyce.github.io/dashicons/
     'supports'  => array( 'title', 'editor', 'page-attributes' ),
     'taxonomies' => array('category')  
     );

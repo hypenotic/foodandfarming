@@ -26,6 +26,8 @@
 <!-- /ht Jeremy Keith - http://front.ie/mLXiaS -->
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory'); ?>/style-all.css" media="all">
 
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
 <!-- Google Web Fonts -->
 <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 

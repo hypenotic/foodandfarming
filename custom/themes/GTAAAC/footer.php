@@ -27,6 +27,6 @@
 			</section>
 		</footer>
 	<?php wp_footer(); ?>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/app.min.js" media="all">
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/app.min.js"></script>
 </body>
 </html>

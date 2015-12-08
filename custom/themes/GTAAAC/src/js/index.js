@@ -1,3 +1,5 @@
+$ = jQuery;
+
 $(function() {
   new WOW({
      mobile: false
