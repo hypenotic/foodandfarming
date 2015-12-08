@@ -32,7 +32,7 @@ $tablet-landscape: new-breakpoint(max-height $tab-hmax max-width $tab-wmax orien
 $home-one: new-breakpoint(min-width 1367px max-width 94em 12);
 
 // Visual Grid view
-$visual-grid: true;
+$visual-grid: false;
 $visual-grid-color: #000;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.2;

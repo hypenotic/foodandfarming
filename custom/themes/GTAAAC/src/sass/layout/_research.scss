@@ -1,29 +1,92 @@
-.research-hero {
-	height: 500px;
-	margin: -30px 0 0 0;	
-	figure {
-		height: 100%;
-		margin: 0; 
-	}
-}
-
 .research-container--outer {
 	overflow-x: hidden;
 	@include outer-container;
 	.research-container--inner {
 		@include media($bp-large) {
 			padding: 50px 0;
-			@include span-columns(8);
-			@include shift(2);
+			@include span-columns(10);
+			@include shift(1);
+	    }
+	    @include media($bp-small) {
+	    	margin: 25px 0;
 	    }
 	}
 }
 
 .research__single {
-	padding-bottom: 20px;
+	padding-bottom: 50px;
+	@include display(flex);
+	// @include align-items(center);
+	@include flex-direction(column);
+	@include media($bp-small) {
+		
+	}
+	h2 {
+		font-size: modular-scale(2);
+		line-height: modular-scale(2);
+		margin: 15px 0 40px;
+	}
+}
 
+.research__single__bottom {
+	@include display(flex);
+	@include align-items(flex-start);
+	@include justify-content(center);
+}
+
+.research__single__image {
+	@include flex(0 0 30%);
+	padding: 0 25px 0 0;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+.research__single__content {
+	padding: 0 25px;
+	@include flex(0 0 70%);
 }
 
 .research__single:last-child {
 	padding-bottom: 0;
+}
+
+.research__blurb {
+	p {
+		font-size: modular-scale(0, 1.2rem);
+		line-height: modular-scale(1, 1.2rem);
+	}
+}
+
+.research__buttons {
+	@include media($bp-small) {
+		@include flex-direction(column);
+	}
+	button {
+		font-size: modular-scale(0, 1.3rem);
+		line-height: modular-scale(0, 1.3rem);
+		text-transform: uppercase;
+		padding: 15px 20px;
+		background: #565655;
+		border: 1px solid #565655;
+		font-family: "Francois One";
+		&:hover {
+			color: #565655;
+			background: #a49771;
+		}
+	}
+	button.right-button {
+		margin-left: 20px;
+		@include media($bp-small) {
+			margin: 0;
+			margin-top: 20px;
+		}
+	}
+}
+
+.research__cta {
+	width: 100%;
+	height: 300px;
+	background-color: #a49771;
 }

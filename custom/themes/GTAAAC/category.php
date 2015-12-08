@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-
+<section class="block">
+<div id="main" role="main">
 
 	<h1><?php printf('<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 		
@@ -32,4 +33,5 @@
 	
 </div><!--/main-->
 <?php get_sidebar(); ?>
+</section>
 <?php get_footer(); ?>

@@ -75,27 +75,11 @@
         <div class="main-menu">
         	<section class="menu-block">
 			<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
-			<?php /*?><div id="navigation-mobile">
-				<ul id="nav">
-					<li><a id="toggle" href="javascript:void(0);">SECTIONS</a></li>
-						<ul id="hidden">
-							<?php wp_list_categories('orderby=name&title_li='); ?> 
-							<?php wp_nav_menu( array('menu' => 'Main Menu')); ?>
-							<?php wp_nav_menu( array('menu' => 'Utility Menu')); ?>
-						</ul>
-						
-						<script>
-						$("#toggle").click(function (){
-						$("#hidden").slideToggle("fast");
-						});
-						</script>
-				</ul>			
-			</div><?php */?>
             </section>
         </div>
 	</header>
-	<?php if (is_home()) { ?>
+<!-- 	<?php if (is_home()) { ?>
 	<section id="banner" class="block">
 		<a href="<?php echo get_option('home'); ?>"><img src="banner.jpg"></a>
 	</section>
-	<?php } ?>
+	<?php } ?> -->

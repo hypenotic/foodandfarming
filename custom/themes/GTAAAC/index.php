@@ -1,6 +1,12 @@
 <?php get_header(); ?>
-<section class="block">
-<div id="main" role="main">
+	<div class="home-hero">
+	    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
+	    <div class="animated fadeInDown">
+	        <h1>Heading</h1>
+	    </div>
+	</div>
+	<section class="block">
+	<div id="main" role="main">
 	<h3>Recent News</h3>
 		<?php while ( have_posts() ) : the_post() ?>
 			<article>
@@ -16,5 +22,5 @@
 		<?php endwhile; ?>
 	</div><!-- /main -->
 <?php get_sidebar(); ?>
-	</section>
+</section>
 <?php get_footer(); ?>

@@ -1,3 +1,5 @@
+	
+
 		<footer> 
 			<section class="block clear">
 					<div class="footer-column-wide">
@@ -25,6 +27,6 @@
 			</section>
 		</footer>
 	<?php wp_footer(); ?>
-
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/app.min.js" media="all">
 </body>
 </html>

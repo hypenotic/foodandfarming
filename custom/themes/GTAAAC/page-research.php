@@ -14,10 +14,7 @@
 		<div class="research-hero">
 		    <figure style="background-image: url('https://images.unsplash.com/24/SAM_0551.JPG'); background-size: cover; background-position: center center;"></figure>
 		    <div class="animated fadeInDown">
-		        <h1><?php echo $heading; ?></h1>
-		        <?php if ($subheading) { ?>
-					<h2><?php echo $subheading; ?></h2>
-	        	<?php } ?>
+		        <h1>Heading</h1>
 		    </div>
 		</div>
 
@@ -38,26 +35,32 @@
 				
 						<div class="research__single">
 							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-							<div class="research__blurb">
-								<?php the_content(); ?>
-							</div>
-							<div class="research__buttons">
-								<a href="<?php echo $pdflink; ?>">
-									<button>
-										Download Report
-									</button>
-								</a>
-								<a href="<?php echo $contactL; ?>">
-									<button>
-										<?php echo $contact; ?>
-									</button>
-								</a>
+							<div class="research__single__bottom">
+								<div class="research__single__image">
+									<img src="https://images.unsplash.com/24/SAM_0551.JPG" height="187" width="300" alt="">
+								</div>
+								<div class="research__single__content">
+									<div class="research__blurb">
+										<?php the_content(); ?>
+									</div>
+									<div class="research__buttons">
+										<a href="<?php echo $pdflink; ?>">
+											<button>
+												Download Report
+											</button>
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 				
 				<?php endwhile; endif; ?>
 			</div>
 		</div>
+
+		<section class="research__cta">
+			
+		</section>
 	
 	<?php endwhile; else : ?>
 	    <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
