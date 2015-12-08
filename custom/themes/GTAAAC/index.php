@@ -1,10 +1,10 @@
 <?php get_header(); ?>
-	<div class="home-hero">
+<!-- 	<div class="home-hero">
 	    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
 	    <div class="animated fadeInDown">
 	        <h1>Heading</h1>
 	    </div>
-	</div>
+	</div> -->
 	<section class="block">
 	<div id="main" role="main">
 	<h3>Recent News</h3>
