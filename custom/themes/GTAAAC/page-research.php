@@ -50,7 +50,7 @@
 												Download Report
 											</button>
 										</a>
-										<a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo urlencode(the_permalink()); ?>&via=GHfoodfarming&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">
+										<a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo home_url(); ?>/research&via=GHfoodfarming&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">
 											<button class="right-button" alt="Tweet This Report">
 												<i class="fa fa-twitter"></i>
 											</button>
