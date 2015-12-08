@@ -14,7 +14,7 @@
 }
 
 .research__single {
-	padding-bottom: 50px;
+	padding-bottom: 80px;
 	@include display(flex);
 	// @include align-items(center);
 	@include flex-direction(column);
@@ -24,13 +24,13 @@
 	h2 {
 		font-size: modular-scale(2);
 		line-height: modular-scale(2);
-		margin: 15px 0 40px;
+		margin: 15px 0 30px;
 	}
 }
 
 .research__single__bottom {
 	@include display(flex);
-	@include align-items(flex-start);
+	@include align-items(center);
 	@include justify-content(center);
 }
 
@@ -48,6 +48,16 @@
 	@include flex(0 0 70%);
 }
 
+.research__single:nth-child(even) .research__single__bottom {
+	.research__single__image {
+		@include order(2);
+		padding: 0 0 0 25px;
+	}	
+	.research__single__content {
+		padding-left: 0;
+	}
+}
+
 .research__single:last-child {
 	padding-bottom: 0;
 }
@@ -59,7 +69,8 @@
 	}
 }
 
-.research__buttons {
+.research__buttons,
+.research__cta {
 	@include media($bp-small) {
 		@include flex-direction(column);
 	}
@@ -87,6 +98,32 @@
 
 .research__cta {
 	width: 100%;
-	height: 300px;
+	min-height: 400px;
 	background-color: #a49771;
+	@include display(flex);
+	// @include align-items(center);
+	@include justify-content(center);
+	@include flex-direction(column);
+	h2 {
+		font-family: 'Georgia';
+		color: $white;
+		font-size: modular-scale(3);
+		line-height: modular-scale(4, 1.3rem);
+		margin: 0 20%;
+	}
+	button {
+		padding: 25px 50px;
+		margin-top: 30px;
+		margin-left: 20%;
+		background: #565655;
+		border: 1px solid #565655;
+		font-family: "Francois One";
+		font-size: modular-scale(1);
+		line-height: modular-scale(1);
+		color: #a49771;
+		&:hover {
+			color: #565655;
+			background: #a49771;
+		}
+	}
 }

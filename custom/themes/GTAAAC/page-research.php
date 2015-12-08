@@ -34,12 +34,13 @@
 						?>
 				
 						<div class="research__single">
-							<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+							<!-- <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a> -->
 							<div class="research__single__bottom">
 								<div class="research__single__image">
 									<img src="https://images.unsplash.com/24/SAM_0551.JPG" height="187" width="300" alt="">
 								</div>
 								<div class="research__single__content">
+									<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
 									<div class="research__blurb">
 										<?php the_content(); ?>
 									</div>
@@ -59,7 +60,8 @@
 		</div>
 
 		<section class="research__cta">
-			
+			<h2>If you want to learn more about any of these projects...</h2>
+			<a href=""><button> get in touch</button></a>
 		</section>
 	
 	<?php endwhile; else : ?>
