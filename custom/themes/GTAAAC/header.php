@@ -79,8 +79,8 @@
             </section>
         </div>
 	</header>
-<!-- 	<?php if (is_home()) { ?>
+	<?php if (is_home()) { ?>
 	<section id="banner" class="block">
 		<a href="<?php echo get_option('home'); ?>"><img src="banner.jpg"></a>
 	</section>
-	<?php } ?> -->
+	<?php } ?>
