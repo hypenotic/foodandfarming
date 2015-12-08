@@ -14,6 +14,12 @@ img.left.top.logo {
 	// padding-top: 40px;
 }
 
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega ul.sub-menu-1 > li.menu-item{
+	padding: 0 10px;
+	text-align: center;
+	// right: 20px;
+}
+
 @media (min-width: 768px) {
 	#megaMenu.megaResponsiveToggle ul.megaMenu {
 		display: flex !important;
