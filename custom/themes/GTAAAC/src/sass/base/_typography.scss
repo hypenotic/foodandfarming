@@ -20,6 +20,22 @@
 
 // GLOBAL
 
+.index__single-post {
+	margin-bottom: 80px;
+	h2 {
+		font-size: modular-scale(1);
+		line-height: modular-scale(2);
+		margin: 0;
+	}
+	p {
+		font-size: modular-scale(0);
+		line-height: modular-scale(1, 1.7rem);
+	}
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
 
 
 

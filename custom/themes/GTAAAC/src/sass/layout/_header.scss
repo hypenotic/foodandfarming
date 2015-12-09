@@ -39,7 +39,8 @@ img.left.top.logo {
 }
 
 .research-hero,
-.home-hero  {
+.home-hero,
+.small-hero  {
 	width: 100%;
 	background-position: center center;
 	background-size: cover;
@@ -49,7 +50,8 @@ img.left.top.logo {
 }
 
 .research-hero,
-.home-hero  {
+.home-hero,
+.small-hero  {
 	width: 100%;
 	height: 80vh;
 	position: relative;
@@ -62,6 +64,7 @@ img.left.top.logo {
 		height: 100%; // or 100%?
 		// filter: grayscale(80%) brightness(0.6) opacity(1);
 		z-index: 50;
+		margin: 0;
 	}
 	div.animated {
 		position: relative;
@@ -85,6 +88,15 @@ img.left.top.logo {
 
 .research-hero {
 	height: 60vh;	
+}
+
+.small-hero {
+	height: 300px;
+	div.animated {
+		h1 {
+			color: #fff;
+		}
+	}
 }
 
 .home-hero {

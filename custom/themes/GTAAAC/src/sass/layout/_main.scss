@@ -1,0 +1,23 @@
+body {
+	// font: 1em/1.3em Georgia, sans-serif; /* 16px/24px */ 
+	// font-size: modular-scale(0);
+	// line-height: modular-scale(1);
+}
+
+.outer-container {
+	overflow-x: hidden;
+	@include outer-container;
+	.inner-container {
+	    @include media($bp-small) {
+	    	margin: 25px 0;
+	    }
+	    @include media($bp-med) {
+			padding: 25px 0;
+	    }
+    	@include media($bp-large) {
+    		padding: 70px 0;
+    		@include span-columns(8);
+    		@include shift(2);
+        }
+	}
+}

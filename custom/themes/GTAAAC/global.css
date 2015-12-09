@@ -79,7 +79,8 @@ img.alignright {
 body {
 	background-image: url('/wp-content/themes/gtaaac/images/bg.gif');
 	color: #403836;
-	font: 1em/1.3em Georgia, sans-serif; /* 16px/24px */ }
+	font: 1em/1.3em Georgia, sans-serif; /* 16px/24px */ 
+}
 
 h1 {
 	color:#504343;
