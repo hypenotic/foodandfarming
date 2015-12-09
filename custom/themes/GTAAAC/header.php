@@ -8,8 +8,8 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <title><?php wp_title( '|', true, 'right' ); ?><?php bloginfo('name') ?></title>
 
-<meta name="description" content="">
-<meta name="author" content="">
+<meta name="description" content="Established in 2005, the Greater Toronto Area Agricultural Action Committee (GTA AAC) is a unique partnership involving the four regional municipalities of Halton, Peel, York and Durham, the four Greater Toronto Area Federations of Agriculture (Halton, Peel, York and Durham), the City of Toronto, the Toronto Food Policy Council, the Ontario Ministry of Agriculture and Food Ministry of Rural Affairs; Agriculture and Agri-Food Canada; and the food sector." />
+<meta name="author" content="Greater Toronto Area Agricultural Action Committee (GTA AAC)">
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, minimum  -scale=1.0, maximum-scale=1.0">
