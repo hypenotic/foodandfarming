@@ -17,7 +17,7 @@
 					<?php endif;?>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 					<p class="meta"><i><?php the_time('l, F j, Y'); ?></i></p>
-					<p><?php echo excerpt(30); ?><a href="<?php the_permalink(); ?>">read more</a></p>
+					<p><?php echo excerpt(50); ?><a href="<?php the_permalink(); ?>">read more</a></p>
 				</article>
 			<?php endwhile; ?>
 		</div>
