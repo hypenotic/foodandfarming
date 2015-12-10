@@ -49,7 +49,7 @@
 										<?php the_content(); ?>
 									</div>
 									<div class="research__buttons">
-										<a href="<?php echo $pdflink; ?>">
+										<a href="<?php echo $pdflink; ?>" target="_blank">
 											<button>
 												Download Report
 											</button>
