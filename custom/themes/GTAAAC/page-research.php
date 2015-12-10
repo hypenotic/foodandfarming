@@ -30,7 +30,6 @@
 
 							$img     	= get_post_meta( $post->ID, '_meta_photo', true );
 							$imgurl  	= wp_get_attachment_image_src( $img,'meta', true );
-				
 							$pdflink    = get_post_meta( $post->ID, '_meta_downloadlink', true );
 							$contact    = get_post_meta( $post->ID, '_meta_contacttext', true );
 							$contactL   = get_post_meta( $post->ID, '_meta_contactlink', true );
