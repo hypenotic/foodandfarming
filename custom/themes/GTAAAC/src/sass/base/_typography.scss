@@ -26,10 +26,18 @@
 		font-size: modular-scale(1);
 		line-height: modular-scale(2);
 		margin: 0;
+		@include media($bp-small) {
+			font-size: modular-scale(0, 1.3rem);
+			line-height: modular-scale(0, 1.3rem); 
+		}
 	}
 	p {
 		font-size: modular-scale(0);
 		line-height: modular-scale(1, 1.7rem);
+		@include media($bp-small) {
+			font-size: modular-scale(0, 1rem);
+			line-height: modular-scale(1, 1rem); 
+		}
 	}
 	&:last-child {
 		margin-bottom: 0px;

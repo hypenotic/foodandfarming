@@ -11,10 +11,10 @@
     	$large_image_url = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large' );
 	?>
 
-		<div class="research-hero">
-		    <figure style="background-image: url('https://images.unsplash.com/24/SAM_0551.JPG'); background-size: cover; background-position: center center;"></figure>
+		<div class="small-hero">
+		    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
 		    <div class="animated fadeInDown">
-		        <h1>Lorem ipsum dolor sit amet</h1>
+		        <h1><?php the_title(); ?></h1>
 		    </div>
 		</div>
 
@@ -27,20 +27,24 @@
 					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 				
 						<?php // Get custom meta values 
+
+							$img     	= get_post_meta( $post->ID, '_meta_photo', true );
+							$imgurl  	= wp_get_attachment_image_src( $img,'meta', true );
 				
-							$pdflink     = get_post_meta( $post->ID, '_meta_downloadlink', true );
-							$contact     = get_post_meta( $post->ID, '_meta_contacttext', true );
-							$contactL     = get_post_meta( $post->ID, '_meta_contactlink', true );
+							$pdflink    = get_post_meta( $post->ID, '_meta_downloadlink', true );
+							$contact    = get_post_meta( $post->ID, '_meta_contacttext', true );
+							$contactL   = get_post_meta( $post->ID, '_meta_contactlink', true );
 						?>
 				
 						<div class="research__single wow fadeIn">
 							<!-- <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a> -->
 							<div class="research__single__bottom">
 								<div class="research__single__image">
-									<img src="https://images.unsplash.com/24/SAM_0551.JPG" height="187" width="300" alt="">
+									<img src="<?php echo $imgurl[0]; ?>">
 								</div>
 								<div class="research__single__content">
-									<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+									<!-- <a href="<?php the_permalink(); ?>"><h2><?php // the_title(); ?></h2></a> -->
+									<h2><?php the_title(); ?></h2>
 									<div class="research__blurb">
 										<?php the_content(); ?>
 									</div>

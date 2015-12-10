@@ -20,6 +20,14 @@
 					<p><?php echo excerpt(50); ?><a href="<?php the_permalink(); ?>">read more</a></p>
 				</article>
 			<?php endwhile; ?>
+			<div class="oldernewer">
+				<div class="older">
+						<?php next_posts_link('&laquo; Older Entries') ?>
+				</div><!--.older-->
+				<div class="newer">
+						<?php previous_posts_link('Newer Entries &raquo;') ?>
+				</div><!--.older-->
+			</div><!--.oldernewer-->
 		</div>
 	</div>
 <?php // get_sidebar(); ?>

@@ -9,10 +9,10 @@ body {
 	@include outer-container;
 	.inner-container {
 	    @include media($bp-small) {
-	    	margin: 25px 0;
+	    	margin: 25px;
 	    }
 	    @include media($bp-med) {
-			padding: 25px 0;
+			padding: 40px;
 	    }
     	@include media($bp-large) {
     		padding: 70px 0;
