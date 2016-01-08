@@ -1,5 +1,5 @@
 header.clear {
-	height: 200px;
+	min-height: 100px;
 	@include media($bp-small) {
 		max-height: 150px;
 	}
@@ -8,8 +8,16 @@ header.clear {
 	}
 }
 
+.clear.main-header-clear {
+	position: absolute;
+	width: 100%;
+	z-index: 1000;
+}
+
+
 img.left.top.logo {
-	padding-top: 40px;
+	// padding-top: 40px;
+	padding-top: 0;
 	max-width: 350px;
 	@include media($bp-small) {
 		max-width: 300px;
@@ -18,7 +26,7 @@ img.left.top.logo {
 	}
 	@include media($bp-med) {
 		max-width: 300px;
-		margin: 0 10% 15px;
+		margin: 0 5% 15px;
 		padding-top: 25px;
 	}
 }
@@ -28,35 +36,21 @@ img.left.top.logo {
 }
 
 .block.main-header {
-	margin: 0 10%;
 	@include media($bp-small) {
 		margin: 0 auto;
 	}
 	@include media($bp-med) {
 		margin: 0 auto;
 	}
+	@include media($bp-large) {
+		margin: 0 2%;
+		width: 100%;
+	}
+	max-width: 100%;
 }
 
 .main-header-wrapper {
 
-}
-
-#menu-utility-menu.menu {
-	// padding-top: 40px;
-}
-
-#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega ul.sub-menu-1 > li.menu-item{
-	padding: 0 10px;
-	text-align: center;
-	// right: 20px;
-}
-
-@media (min-width: 768px) {
-	#megaMenu.megaResponsiveToggle ul.megaMenu {
-		display: flex !important;
-		@include align-items(center);
-		@include justify-content(space-between);
-	}	
 }
 
 .research-hero,
@@ -121,7 +115,7 @@ img.left.top.logo {
 }
 
 .small-hero {
-	height: 300px;
+	height: 500px;
 	div.animated {
 		h1 {
 			color: #fff;
@@ -132,6 +126,6 @@ img.left.top.logo {
 	}
 }
 
-.home-hero {
-	height: 300px;
-}
+// .home-hero {
+// 	height: 80vh;
+// }

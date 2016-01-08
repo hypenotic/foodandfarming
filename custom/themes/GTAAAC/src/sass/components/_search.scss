@@ -16,3 +16,21 @@ input.error-submit.big-search {
 		font-size: modular-scale(1);
     }
 }
+
+.search-container {
+	@include media($bp-large) {
+		margin: 0;
+	}
+	@include media($bp-med) {
+		margin: 0;
+	}
+}
+
+.secondary-nav {
+	@include media($bp-large) {
+		padding-top: 20px;
+	}
+	@include media($bp-med) {
+		padding-top: 20px;
+	}
+}

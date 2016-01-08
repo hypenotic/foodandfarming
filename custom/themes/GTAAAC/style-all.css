@@ -23,11 +23,15 @@ html {
 }
 
 body {
-	background-image: url('images/bg.gif');
+	/*background-image: url('images/bg.gif');*/
 	color: #403836;
 	font: 1em/1.3em Georgia, sans-serif; /* 16px/24px */ 
 	-webkit-text-size-adjust:100%; //Specifies a size adjustment for displaying text content in Safari on iOS 
 	-webkit-tap-highlight-color:#ff1aa8;
+}
+
+.block {
+	/*background-image: url('images/bg.gif');*/
 }
 
 img, 
@@ -126,10 +130,10 @@ img.alignright {
 ----------------------------------------------------------------------------------------*/
 
 header {
-	background: url('images/bg-header.gif');
+	/*background: url('images/bg-header.gif');*/
 }
 nav{
-	background: url('images/bg-nav.gif');
+	/*background: url('images/bg-nav.gif');*/
 } 
 
 footer {

@@ -1,0 +1,41 @@
+.main-menu {
+	margin: 15px 0;
+	min-height: 50px;
+	background: transparent;
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+}
+
+#menu-utility-menu.menu {
+	@include media($bp-large) {
+		padding: 0;
+	}
+	@include media($bp-med) {
+		padding: 0;
+	}
+}
+
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega ul.sub-menu-1 > li.menu-item{
+	padding: 0 10px;
+	text-align: center;
+	// right: 20px;
+}
+
+#megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega {
+	@include media($bp-med) {
+		font-size: modular-scale(0, 0.6rem);
+	}
+}
+
+#megaMenu ul.megaMenu > li.menu-item > a span.wpmega-link-title, #megaMenu ul.megaMenu > li.menu-item > span.um-anchoremulator span.wpmega-link-title {
+	color: #403836;
+}
+
+@media (min-width: 768px) {
+	#megaMenu.megaResponsiveToggle ul.megaMenu {
+		display: flex !important;
+		@include align-items(center);
+		@include justify-content(space-between);
+	}	
+}

@@ -67,19 +67,27 @@
 </head>
 <body <?php body_class($class); ?>>
 <!-- <div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div> -->
-	<header class="clear">
+	<header class="clear main-header-clear">
 		<section class="block main-header">
 			<div class="main-header-wrapper">
-				<a href="<?php echo get_option('home'); ?>"><img class="left top logo" src="logo.png"></a>
-				<?php get_search_form();  ?>
-				<?php wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
+				<a href="<?php echo get_option('home'); ?>">
+					<?php if (is_home()) { ?>
+						<img class="left top logo" src="logo-nobyline.png">
+					<?php } else { ?> 	
+						<img class="left top logo" src="logo.png">
+					<?php } ?> 					
+				</a>
+ 				<!-- <div class="secondary-nav">
+					<?php get_search_form();  ?>
+					<?php //wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
+				</div> -->
+			        <div class="main-menu">
+			        	<section class="menu-block">
+						<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
+			            </section>
+			        </div>
 			</div>
 		</section> 
-        <div class="main-menu">
-        	<section class="menu-block">
-			<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
-            </section>
-        </div>
 	</header>
 <!-- 	<?php if (is_home()) { ?>
 	<section id="banner" class="block">
