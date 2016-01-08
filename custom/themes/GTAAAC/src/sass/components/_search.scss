@@ -1,0 +1,12 @@
+input.search-field.big-search {
+	border: 0;
+	border-bottom: 2px solid $grey;
+	background: transparent;
+	width: 80%;
+	font-size: modular-scale(1);
+	margin-right: 2%;
+}
+
+input.error-submit.big-search {
+	font-size: modular-scale(1);
+}
