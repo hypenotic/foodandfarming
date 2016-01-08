@@ -16,8 +16,16 @@
 	}
 }
 
+.research-blurb {
+	margin: 0 7% 70px;
+	p {
+		font-size: modular-scale(0, 1.9rem);
+		line-height: modular-scale(1, 1.9rem);
+	}
+}
+
 .research__single {
-	padding-bottom: 60px;
+	padding-bottom: 70px;
 	@include display(flex);
 	// @include align-items(center);
 	@include flex-direction(column);
@@ -33,7 +41,7 @@
 
 .research__single__bottom {
 	@include display(flex);
-	@include align-items(center);
+	@include align-items(flex-start);
 	@include justify-content(center);
 	@include media($bp-small) {
 		@include flex-direction(column);
@@ -60,6 +68,7 @@
 		position: relative;
 		width: 100%;
 		height: auto;
+		padding-top: 5px;
 	}
 }
 
@@ -73,6 +82,9 @@
 	@include media($bp-med) {
 		@include flex(1 0 auto);
 		padding: 0 25px;
+	}
+	h2 {
+		margin-top: 0;
 	}
 }
 

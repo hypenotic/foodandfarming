@@ -20,6 +20,11 @@
 
 		<div class="research-container--outer">
 			<div class="research-container--inner">
+
+				<div class="research-blurb">
+					<?php the_content(); ?>
+				</div>
+
 				<?php
 							
 					$query = new WP_Query( array( 'post_type' => 'report' ) );

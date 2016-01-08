@@ -26,13 +26,16 @@ $bmobile-landscape: new-breakpoint(max-height $mob-lh min-width $mob-lw orientat
 $tablet-landscape: new-breakpoint(max-height $tab-hmax max-width $tab-wmax orientation landscape 12);
 
 // NOTE: put mobile-landscape and xsmall below all others, or they'll be
-	// over written
+	// over-written
 
 // Home Page 
 $home-one: new-breakpoint(min-width 1367px max-width 94em 12);
 
 // Visual Grid view
 $visual-grid: false;
+// $visual-grid: true;
 $visual-grid-color: #000;
 $visual-grid-index: front;
-$visual-grid-opacity: 0.2;
+$visual-grid-opacity: 0.1;
+
+
