@@ -31,42 +31,42 @@
 				
 					if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 				
-						<?php // Get custom meta values 
+					<?php // Get custom meta values 
 
-							$img     	= get_post_meta( $post->ID, '_meta_photo', true );
-							$imgurl  	= wp_get_attachment_image_src( $img,'meta', true );
-							$pdflink    = get_post_meta( $post->ID, '_meta_downloadlink', true );
-							$contact    = get_post_meta( $post->ID, '_meta_contacttext', true );
-							$contactL   = get_post_meta( $post->ID, '_meta_contactlink', true );
-						?>
-				
-						<div class="research__single wow fadeIn">
-							<!-- <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a> -->
-							<div class="research__single__bottom">
-								<div class="research__single__image">
-									<img src="<?php echo $imgurl[0]; ?>">
+						$img     	= get_post_meta( $post->ID, '_meta_photo', true );
+						$imgurl  	= wp_get_attachment_image_src( $img,'meta', true );
+						$pdflink    = get_post_meta( $post->ID, '_meta_downloadlink', true );
+						$contact    = get_post_meta( $post->ID, '_meta_contacttext', true );
+						$contactL   = get_post_meta( $post->ID, '_meta_contactlink', true );
+					?>
+			
+					<div class="research__single wow fadeIn">
+						<!-- <a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a> -->
+						<div class="research__single__bottom">
+							<div class="research__single__image">
+								<img src="<?php echo $imgurl[0]; ?>">
+							</div>
+							<div class="research__single__content">
+								<!-- <a href="<?php the_permalink(); ?>"><h2><?php // the_title(); ?></h2></a> -->
+								<h2><?php the_title(); ?></h2>
+								<div class="research__blurb">
+									<?php the_content(); ?>
 								</div>
-								<div class="research__single__content">
-									<!-- <a href="<?php the_permalink(); ?>"><h2><?php // the_title(); ?></h2></a> -->
-									<h2><?php the_title(); ?></h2>
-									<div class="research__blurb">
-										<?php the_content(); ?>
-									</div>
-									<div class="research__buttons">
-										<a href="<?php echo $pdflink; ?>" target="_blank">
-											<button>
-												Download Report
-											</button>
-										</a>
-										<a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo home_url(); ?>/research&via=GHfoodfarming&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">
-											<button class="right-button" alt="Tweet This Report">
-												<i class="fa fa-twitter"></i>
-											</button>
-										</a>
-									</div>
+								<div class="research__buttons">
+									<a href="<?php echo $pdflink; ?>" target="_blank">
+										<button>
+											Download Report
+										</button>
+									</a>
+									<a href="http://twitter.com/share?text=<?php echo urlencode(the_title()); ?>&url=<?php echo home_url(); ?>/research&via=GHfoodfarming&related=<?php echo urlencode("coderplus:Wordpress Tips, jQuery and more"); ?>" title="Share on Twitter" rel="nofollow" target="_blank">
+										<button class="right-button" alt="Tweet This Report">
+											<i class="fa fa-twitter"></i>
+										</button>
+									</a>
 								</div>
 							</div>
 						</div>
+					</div>
 				
 				<?php endwhile; endif; ?>
 			</div>

@@ -3,10 +3,16 @@ input.search-field.big-search {
 	border-bottom: 2px solid $grey;
 	background: transparent;
 	width: 80%;
-	font-size: modular-scale(1);
 	margin-right: 2%;
+	font-size: modular-scale(0);
+	@include media($bp-large) {
+		font-size: modular-scale(1);
+    }
 }
 
 input.error-submit.big-search {
-	font-size: modular-scale(1);
+	font-size: modular-scale(0);
+	@include media($bp-large) {
+		font-size: modular-scale(1);
+    }
 }

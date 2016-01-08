@@ -18,9 +18,16 @@
 
 .research-blurb {
 	margin: 0 7% 70px;
+	@include media($bp-small) {
+		margin-bottom: 0px;
+	}
 	p {
 		font-size: modular-scale(0, 1.9rem);
 		line-height: modular-scale(1, 1.9rem);
+		@include media($bp-small) {
+			font-size: modular-scale(0, 1.2rem);
+			line-height: modular-scale(1, 1.2rem);
+		}
 	}
 }
 
@@ -30,7 +37,7 @@
 	// @include align-items(center);
 	@include flex-direction(column);
 	@include media($bp-small) {
-		
+		padding-bottom: 30px;
 	}
 	h2 {
 		font-size: modular-scale(2);
@@ -69,6 +76,9 @@
 		width: 100%;
 		height: auto;
 		padding-top: 5px;
+		@include media($bp-small) {
+			
+		}
 	}
 }
 
@@ -95,6 +105,7 @@
 		@include media($bp-small) {
 			@include order(-1);
 			padding: 25px;
+			padding-top: 0;
 		}
 		@include media($bp-med) {
 			@include order(-1);

@@ -66,13 +66,15 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/style.css" media="all">
 </head>
 <body <?php body_class($class); ?>>
-<div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div>
+<!-- <div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div> -->
 	<header class="clear">
-		<section class="block">
-			<a href="<?php echo get_option('home'); ?>"><img class="left top logo" src="logo.png"></a>
-			<?php get_search_form();  ?>
-			<?php wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
-		</section>
+		<section class="block main-header">
+			<div class="main-header-wrapper">
+				<a href="<?php echo get_option('home'); ?>"><img class="left top logo" src="logo.png"></a>
+				<?php get_search_form();  ?>
+				<?php wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
+			</div>
+		</section> 
         <div class="main-menu">
         	<section class="menu-block">
 			<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
