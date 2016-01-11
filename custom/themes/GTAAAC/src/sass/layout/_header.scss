@@ -16,7 +16,7 @@ header.clear {
 
 img.left.top.logo {
 	// padding-top: 40px;
-	padding: 0 0 0 20px;
+	padding: 0 0 0 40px;
 	max-width: 350px;
 	@include media($bp-small) {
 		max-width: 300px;
@@ -32,6 +32,10 @@ img.left.top.logo {
 
 .block {
 	width: 100% !important;
+}
+
+section.main-header {
+	padding: 0;
 }
 
 .block.main-header {
@@ -130,7 +134,7 @@ img.left.top.logo {
 .small-hero {
 	min-height: 450px;
 	@include media($bp-small) {
-		min-height: 200px;
+		min-height: 400px;
 	}
 }
 
