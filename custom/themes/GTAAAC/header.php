@@ -85,11 +85,11 @@
 					<?php get_search_form();  ?>
 					<?php //wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
 				</div> -->
-			        <div class="main-menu">
-			        	<section class="menu-block">
-						<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
-			            </section>
-			        </div>
+		        <div class="main-menu">
+		        	<section class="menu-block">
+					<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
+		            </section>
+		        </div>
 			</div>
 		</section> 
 	</header>

@@ -16,16 +16,16 @@ header.clear {
 
 img.left.top.logo {
 	// padding-top: 40px;
-	padding: 20px 0 0 20px;
+	padding: 0 0 0 20px;
 	max-width: 350px;
 	@include media($bp-small) {
 		max-width: 300px;
-		margin: 0 10% 15px;
+		margin: 0 2% 15px;
 		padding-top: 25px;
 	}
 	@include media($bp-med) {
 		max-width: 300px;
-		margin: 50px 3% 15px;
+		margin: 0px 3% 15px;
 		padding-top: 25px;
 	}
 }
