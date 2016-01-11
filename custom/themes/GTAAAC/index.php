@@ -2,7 +2,7 @@
 	<div class="home-hero">
 	    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
 	    <div class="animated fadeInDown">
-	        <h1>Working in partnership for a vibrant food and farming cluster.</h1>
+	        <h1><?php dynamic_sidebar( 'home-sentence' ); ?> </h1>
 	    </div>
 	</div>
 	<section class="block">
@@ -21,6 +21,6 @@
 			</article>
 		<?php endwhile; ?>
 	</div><!-- /main -->
-<!-- <?php get_sidebar(); ?> -->
+<?php get_sidebar(); ?>
 </section>
 <?php get_footer(); ?>

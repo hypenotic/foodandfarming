@@ -5,6 +5,16 @@
 	@include display(flex);
 	@include align-items(center);
 	@include justify-content(center);
+	@include media($bp-med) {
+		position: absolute;
+		top: 10px;
+		left: 0;
+		width: 100%;
+		.menu-block {
+			margin: 0;
+			width: 100%;
+		}
+	}
 }
 
 #menu-utility-menu.menu {
@@ -14,6 +24,16 @@
 	@include media($bp-med) {
 		padding: 0;
 	}
+}
+
+.megaMenuToggleOpen {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+section.menu-block {
+	margin-right: 0px;
 }
 
 #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega ul.sub-menu-1 > li.menu-item{

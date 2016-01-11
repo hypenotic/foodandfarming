@@ -68,15 +68,19 @@
 <body <?php body_class($class); ?>>
 <!-- <div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div> -->
 	<header class="clear main-header-clear">
-		<section class="block main-header">
-			<div class="main-header-wrapper">
-				<a href="<?php echo get_option('home'); ?>">
-					<?php if (is_home()) { ?>
-						<img class="left top logo" src="logo-nobyline.png">
-					<?php } else { ?> 	
-						<img class="left top logo" src="logo.png">
-					<?php } ?> 					
-				</a>
+				<?php if (is_home()) { ?>
+				<section class="block main-header home-header">
+					<div class="main-header-wrapper">
+						<a href="<?php echo get_option('home'); ?>">
+							<img class="left top logo" src="logo-nobyline.png">
+						</a>
+				<?php } else { ?> 	
+				<section class="block main-header">
+					<div class="main-header-wrapper">
+						<a href="<?php echo get_option('home'); ?>">
+							<img class="left top logo" src="logo.png">
+						</a>
+				<?php } ?> 					
  				<!-- <div class="secondary-nav">
 					<?php get_search_form();  ?>
 					<?php //wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
@@ -89,8 +93,3 @@
 			</div>
 		</section> 
 	</header>
-<!-- 	<?php if (is_home()) { ?>
-	<section id="banner" class="block">
-		<a href="<?php echo get_option('home'); ?>"><img src="banner.jpg"></a>
-	</section>
-	<?php } ?> -->

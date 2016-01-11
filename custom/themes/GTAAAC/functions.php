@@ -45,6 +45,16 @@
 		'after_title' => '</h3>',
 	));
 
+	// Sidebar Widget - Home Header Sentence
+	// Location: Home Header
+	register_sidebar(array('name'=>'Home Page Sentence',
+		'id' => 'home-sentence',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));	
+
 
 // This theme styles the visual editor with editor-style.css to match the theme style.
 	add_editor_style();
