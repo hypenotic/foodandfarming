@@ -92,4 +92,9 @@
 		        </div>
 			</div>
 		</section> 
+		<div class="overlay overlay-slidedown">
+			<?php get_search_form(); ?>
+			<button class="overlay-close"></button>
+		</div>
+		<div id="trigger-overlay">
 	</header>

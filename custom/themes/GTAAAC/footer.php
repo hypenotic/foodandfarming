@@ -27,6 +27,8 @@
 			</section>
 		</footer>
 	<?php wp_footer(); ?>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/modernizr.custom.js"></script>
+	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/classie.js"></script>
 	<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/dist/js/app.min.js"></script>
 </body>
 </html>

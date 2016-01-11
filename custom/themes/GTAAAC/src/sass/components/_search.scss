@@ -34,3 +34,191 @@ input.error-submit.big-search {
 		padding-top: 20px;
 	}
 }
+
+// Search Overlay
+/* Overlay style */
+
+#trigger-overlay,
+#trigger-overlay__mobile {
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	top: 105px;
+	right: 0px;
+	background: url(../benefact/dist/images/search.png) center center;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-color: $grey;
+	z-index: 10000000000;
+}
+
+#trigger-overlay {
+		position: fixed;
+	@include media($bp-small and $bp-med) {
+		display: none;
+	}
+}
+
+#trigger-overlay__mobile {
+	display: none;
+	@include media($bp-small and $bp-med) {
+		display: block;
+		position: fixed;
+		top: 52px;
+		right: 0px;
+	}
+}
+
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(255, 79, 41, 0.9);
+	z-index: 1001;
+}
+
+/* Overlay closing cross */
+.overlay .overlay-close {
+	width: 80px;
+	height: 80px;
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	overflow: hidden;
+	border: none;
+	background: url(../benefact/dist/images/cross.png) no-repeat center center;
+	text-indent: 200%;
+	color: transparent;
+	outline: none;
+	z-index: 100;
+}
+
+/* Menu style */
+.overlay nav {
+	text-align: center;
+	position: relative;
+	top: 50%;
+	height: 60%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.overlay ul {
+	list-style: none;
+	padding: 0;
+	margin: 0 auto;
+	display: inline-block;
+	height: 100%;
+	position: relative;
+}
+
+.overlay ul li {
+	display: block;
+	height: 20%;
+	height: calc(100% / 5);
+	min-height: 54px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.overlay ul li a {
+	font-size: 54px;
+	font-weight: 300;
+	display: block;
+	color: #fff;
+	-webkit-transition: color 0.2s;
+	transition: color 0.2s;
+}
+
+.overlay ul li a:hover,
+.overlay ul li a:focus {
+	color: #e3fcb1;
+}
+
+/* Effects */
+.overlay-slidedown {
+	visibility: hidden;
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out, visibility 0s 0.4s;
+	transition: transform 0.4s ease-in-out, visibility 0s 0.4s;
+}
+
+.overlay-slidedown.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.4s ease-in-out;
+	transition: transform 0.4s ease-in-out;
+}
+
+@media screen and (max-height: 30.5em) {
+	.overlay nav {
+		height: 70%;
+		font-size: 34px;
+	}
+	.overlay ul li {
+		min-height: 34px;
+	}
+}
+
+// FULLSCREEN OVERLAY - BIG SEARCH FORM 
+.overlay {
+	@include display(flex);
+	@include align-items(center);
+	@include justify-content(center);
+	form.search-form {
+		@include display(flex);
+		@include align-items(center);
+		@include justify-content(center);
+		.search-field {
+			width: 200px;
+			height: 70px;
+			background-color: transparent;
+			border: 0;
+			border-bottom: 3px solid rgba(255,255,255,0.6);
+			color: rgba(255,255,255,0.8);
+			font-size: 30px;
+			@include media($bp-large) {
+				width: 500px;
+				font-size: 50px;
+			}
+		}
+		::-webkit-input-placeholder {
+		   color: rgba(255,255,255,0.5);
+		}
+
+		:-moz-placeholder { /* Firefox 18- */
+		   color: rgba(255,255,255,0.5); 
+		}
+
+		::-moz-placeholder {  /* Firefox 19+ */
+		   color: rgba(255,255,255,0.5); 
+		}
+
+		:-ms-input-placeholder {  
+		   color: rgba(255,255,255,0.5); 
+		}
+		.search-submit {
+			// padding-top: 30px;
+			width: 70px;
+			height: 70px;
+			background: url(../benefact/dist/images/search.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			border: 0;
+			margin-left: 10px;
+			@include media($bp-small) {
+				width: 50px;
+				height: 50px;
+			}
+		}
+		i {
+			color: $white;
+			font-size: 50px;
+		}
+		
+	}
+}

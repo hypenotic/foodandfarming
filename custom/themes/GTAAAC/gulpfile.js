@@ -15,9 +15,6 @@ var gulp          = require('gulp'),
 var outputDir = 'dist';
 
 var scriptList = [
-  'src/js/classie.js',
-  'src/js/modernizr.custom.js',
-  'src/js/wow.min.js',
   'src/js/index.js'
 ];
 
