@@ -1,10 +1,6 @@
 $ = jQuery;
 
 $(function() {
-	
-});
-
-(function() {
 	var triggerBttn = document.getElementById( 'trigger-overlay' ),
 		overlay = document.querySelector( 'div.overlay' ),
 		closeBttn = overlay.querySelector( 'button.overlay-close' );
@@ -42,5 +38,5 @@ $(function() {
 	}
 
 	triggerBttn.addEventListener( 'click', toggleOverlay );
-	closeBttn.addEventListener( 'click', toggleOverlay );
-})();
+	closeBttn.addEventListener( 'click', toggleOverlay );	
+});
