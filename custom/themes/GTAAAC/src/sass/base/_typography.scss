@@ -56,6 +56,25 @@
 	}
 }
 
+.small-hero.single-post {
+	div.animated {
+		h1 {
+			color: $white;
+			font-size: modular-scale(4, 1.4rem);
+			line-height: modular-scale(4, 1.5rem);
+			text-shadow: 2px 2px rgba(0,0,0,0.4);
+			@include media($bp-small) {
+				font-size: modular-scale(2, 1.4rem);
+				line-height: modular-scale(2, 1.8rem);
+			}
+			@include media($bp-med) {
+				font-size: modular-scale(3, 1.4rem);
+				line-height: modular-scale(3, 1.8rem);
+			}
+		}
+	}
+}
+
 
 
 
