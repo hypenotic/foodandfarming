@@ -48,7 +48,7 @@ input.error-submit.big-search {
 	background: url(../benefact/dist/images/search.png) center center;
 	background-size: 50%;
 	background-repeat: no-repeat;
-	background-color: $grey;
+	background-color: #a49771;
 	z-index: 10000000000;
 }
 
@@ -75,8 +75,14 @@ input.error-submit.big-search {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: rgba(255, 79, 41, 0.9);
+	background: rgba(0, 0, 0, 0.9);
 	z-index: 1001;
+}
+
+.overlay-slidedown {
+	.search-error-page {
+		width: 70%;
+	}
 }
 
 /* Overlay closing cross */
