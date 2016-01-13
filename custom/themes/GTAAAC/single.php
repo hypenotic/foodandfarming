@@ -1,10 +1,18 @@
 <?php get_header(); ?>
-<section class="block">
+<div class="small-hero single-post">
+    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
+    <div class="animated fadeInDown">
+        <h1><?php the_title(); ?></h1>
+        <p class="meta"><?php the_time('l, F j, Y'); ?></p>
+    </div>
+</div>
+
+<section class="block single-post-container">
 <div id="main" role="main">
 	<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 			<article>
-				<h1><?php the_title(); ?></h1>
-				<p class="meta"><?php the_time('l, F j, Y'); ?></p>
+				<!-- <h1><?php the_title(); ?></h1> -->
+				<!-- <p class="meta"><?php // the_time('l, F j, Y'); ?></p> -->
 				<?php the_content(); ?>
 					<?php wp_link_pages('before=<div class="pagination">&after=</div>'); ?>
 			</article>

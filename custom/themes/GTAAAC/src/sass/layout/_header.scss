@@ -138,6 +138,16 @@ section.main-header {
 	}
 }
 
+.small-hero.single-post {
+	min-height: 500px;
+	h1{
+		margin-bottom: 0;
+	}
+	@include media($bp-small) {
+		min-height: 400px;
+	}
+}
+
 .home-hero {
 	min-height: 80vh;
 }
