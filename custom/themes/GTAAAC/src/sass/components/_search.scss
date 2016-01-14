@@ -45,7 +45,7 @@ input.error-submit.big-search {
 	padding: 10px;
 	top: 105px;
 	right: 0px;
-	background: url(../benefact/dist/images/search.png) center center;
+	background: url(../images/search.png) center center;
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-color: #a49771;
@@ -64,7 +64,7 @@ input.error-submit.big-search {
 	@include media($bp-small and $bp-med) {
 		display: block;
 		position: fixed;
-		top: 52px;
+		top: 0px;
 		right: 0px;
 	}
 }
@@ -94,7 +94,7 @@ input.error-submit.big-search {
 	top: 20px;
 	overflow: hidden;
 	border: none;
-	background: url(../benefact/dist/images/cross.png) no-repeat center center;
+	background: url(../images/cross.png) no-repeat center center;
 	text-indent: 200%;
 	color: transparent;
 	outline: none;
@@ -211,7 +211,7 @@ input.error-submit.big-search {
 			// padding-top: 30px;
 			width: 70px;
 			height: 70px;
-			background: url(../benefact/dist/images/search.png);
+			background: url(../images/search.png);
 			background-size: cover;
 			background-repeat: no-repeat;
 			border: 0;

@@ -2,6 +2,7 @@
 	<div class="small-hero">
 	    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
 	    <div class="animated fadeInDown">
+	    	<h2>Category:</h2>
 	        <h1><?php single_cat_title( '', true ); ?></h1>
 	    </div>
 	</div>

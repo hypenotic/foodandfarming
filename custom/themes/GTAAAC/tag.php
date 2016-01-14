@@ -2,6 +2,7 @@
 	<div class="small-hero">
 	    <figure style="background-image: url('banner.jpg'); background-size: cover; background-position: center center;"></figure>
 	    <div class="animated fadeInDown">
+	    	<h2>Posts tagged with:</h2>
 	        <h1><?php single_tag_title(); ?></h1>
 	    </div>
 	</div>
