@@ -52,6 +52,10 @@
 				font-size: modular-scale(3, 1.4rem);
 				line-height: modular-scale(3, 1.8rem);
 			}
+			@include media($bp-xlarge) {
+				font-size: modular-scale(5, 1.4rem);
+				line-height: modular-scale(5, 1.8rem);
+			}
 		}
 	}
 }
@@ -72,6 +76,24 @@
 				line-height: modular-scale(3, 1.8rem);
 			}
 		}
+	}
+}
+
+// Homepage
+.recent-news__home {
+	font-size: modular-scale(3, 1.4rem);
+	line-height: modular-scale(3, 1.5rem);
+	margin-top: 0;
+	margin-bottom: 30px;
+	border-bottom: 2px solid rgba(0,0,0,0.3);
+	padding-bottom: 10px;
+	@include media($bp-small) {
+		font-size: modular-scale(1, 1.4rem);
+		line-height: modular-scale(1, 1.8rem);
+	}
+	@include media($bp-med) {
+		font-size: modular-scale(2, 1.4rem);
+		line-height: modular-scale(2, 1.8rem);
 	}
 }
 
