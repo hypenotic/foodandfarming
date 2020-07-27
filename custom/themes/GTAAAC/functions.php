@@ -1,8 +1,8 @@
 <?php
 
-	include('includes/wp-cuztom-helper/cuztom.php');
+	//include('includes/wp-cuztom-helper/cuztom.php');
 	//Include post custom posts type. Dependent on /wp-cuztom-helper classes.
-	include('includes/wp-cuztom-posts/custom-post-research.php');
+	//include('includes/wp-cuztom-posts/custom-post-research.php');
 
 	// enables wigitized sidebars
 	if ( function_exists('register_sidebar') );

@@ -1,12 +1,13 @@
 === WP to Twitter ===
 Contributors: joedolson
 Donate link: http://www.joedolson.com/donate/
-Tags: twitter, microblogging, su.pr, bitly, yourls, redirect, shortener, post, links, social, sharing, media, tweet
-Requires at least: 3.9.8
-Tested up to: 4.3.1
+Tags: twitter, microblogging, bitly, yourls, redirect, shortener, post, links, social, sharing, media, tweet
+Requires at least: 4.4
+Tested up to: 5.4
+Requires PHP: 5.6
 License: GPLv2 or later
 Text Domain: wp-to-twitter
-Stable tag: 3.1.7
+Stable tag: 3.4.7
 
 Posts a Twitter update when you update your WordPress blog or add a link, with your chosen URL shortening service.
 
@@ -21,8 +22,6 @@ Yep. That's the basic functionality. But it's not the only thing you can do:
 * Shorten URLs in your Tweets with popular URL shorteners, or let Twitter to do it with [t.co](http://t.co). 
 
 [Upgrade to WP Tweets Pro](http://www.joedolson.com/wp-tweets-pro/) and schedule Tweets, set up automatic reposts, upload images and more!
-
-[youtube https://www.youtube.com/watch?v=3YIia5dQBSk]
 
 WP to Twitter uses a customizable Tweet template for Tweets sent when updating or editing posts and pages or custom post types. You can customize your Tweet for each post, using custom template tags to generate the Tweet. 
 
@@ -40,7 +39,7 @@ WP to Twitter uses a customizable Tweet template for Tweets sent when updating o
 Upgrade to [WP Tweets Pro](http://www.joedolson.com/wp-tweets-pro/) for extra features, including:
 
 * Authors can set up their own Twitter accounts in their profiles
-* Time delayed Tweeting
+* Time delayed Tweeting 
 * Scheduled Tweet management
 * Simultaneously Tweet to site and author Twitter accounts
 * Preview and Tweet comments
@@ -48,7 +47,7 @@ Upgrade to [WP Tweets Pro](http://www.joedolson.com/wp-tweets-pro/) for extra fe
 * Upload images to Twitter
 * Integrated Twitter Card support
 * Automatically schedule Tweets of old posts
-* [Check out WP Tweets PRO!](http://www.joedolson.com/wp-tweets-pro/)
+* [Try out WP Tweets PRO!](http://www.joedolson.com/wp-tweets-pro/)
 
 Want to stay up to date on WP to Twitter? [Follow me on Twitter!](https://twitter.com/joedolson)
 
@@ -58,14 +57,281 @@ Visit the [WP to Twitter translation site](https://translate.wordpress.org/proje
 
 Translating my plug-ins is always appreciated. Work on WP to Twitter translations at <a href="https://translate.wordpress.org/projects/wp-plugins/wp-to-twitter">the WordPress translation site</a>! You'll need a WordPress.org account to contribute!
 
+= Extending WP to Twitter =
+
+Check out my <a href="https://github.com/joedolson/plugin-extensions/tree/master/wp-to-twitter">GitHub repository of plug-in extensions</a>.
+
 == Changelog ==
 
-= Future =
+= 3.4.7 =
 
-* Use apply_filters( 'wpt_tweet_sentence', $tweet, $post_ID ) to pass custom taxonomy Tweet formats - Pending WordPress support for taxonomy meta.
-* Add regex filter to detect URLs typed into Tweet fields for counting/shortening purposes. [todo]
-* 4.2 added compat function for mb_substr; drop mine when I drop support for 4.1
-* WP to Twitter timing bug with images?
+* Bug fix: Changed rules for differentiating between new and edited posts.
+* Bug fix: Bit.ly supporting plug-in changed function name.
+* Bug fix: Variable types different between default settings & saved settings.
+* Bug fix: Prevent scheduled Tweets (Pro) if post has been deleted.
+* Update debugging messages & data for better clarity.
+
+= 3.4.6 =
+
+* Bug fix: YOURLS queries not executing.
+
+= 3.4.5 =
+
+* Add support for @ references on tags.
+* Add support for <a href="https://wordpress.org/support/plugin/codehaveli-bitly-url-shortener/">Codehaveli Bitly URL Shortener</a>
+* Remove deprecated category filters. (UI disabled in 2014.)
+* Don't query shorteners if they are enabled but settings are missing.
+
+= 3.4.4 =
+
+* Bug fix: Due to external add-ons, need to test URL shortener settings as strings, not integers.
+* Bugfix: If YOURLS JSON object does not exist, it cannot have values.
+* Change: Support custom domains in jotURL.
+* Change: Add user info to debugging records.
+
+= 3.4.3 =
+
+* Bug fix: Failed to account for a URL value that could be false in template parsing.
+
+= 3.4.2 =
+
+* Bug fix: don't parse Username settings if user is connected to Twitter (Pro)
+* Bug fix: Non-semantic text in user settings.
+* Bug fix: type error in media comparison.
+* Improve logic for exiting media handling. (Pro)
+
+= 3.4.1 =
+
+* Removed goo.gl shortener completely (disabled by Goo.gl in March 2019)
+* Removed su.pr shortener completely (Stumbleupon closed down in June 2018)
+* Prep for removal of Bit.ly URL shortener. (Bitly API v3 will shut down March 2020)
+* Misc. markup improvements.
+
+= 3.4.0 =
+
+* New function: wpt_allowed_post_types(). Returns array of post types that can be Tweeted.
+* New template tag: #categories# Return string of all categories on post. Filterable with 'wpt_twitter_category_names'
+* Change: default tag length allowed raised to 20
+* Change: default number of tags allowed raised to 4
+* Breaking change: Remove major function deprecated in January 2017 and minor functions deprecated March 2018.
+
+= 3.3.12 =
+
+* Missed ssl_verify=false removed
+
+= 3.3.11 =
+
+* Pass post ID to wpt_retweet_text filter.
+* Don't throw duplicate Tweet error if Tweet is blank.
+
+= 3.3.10 =
+
+* Change: Display UI for post types that are private but have a UI (e.g., WooCommerce coupons)
+* Bug fix: User permissions for connecting to Oauth overrode ability to enter personal settings.
+* Bug fix: Exit meta migration if post does not exist.
+
+= 3.3.9 =
+
+* Added filter to cancel Tweets for custom reasons after all other filters executed.
+* Removed video on app creation, due to Twitter's radical revision of creation process.
+* Update setup instructions inside app.
+
+= 3.3.8 =
+
+* Change function name for checking edit vs. new for clarity.
+* Update debugging function to pass post ID of current Tweet.
+* Bug fix: PHP Notice in settings.
+* Bug fix: If rate limiting cron not set, automatically recreate.
+
+= 3.3.7 =
+
+* Change: Remove replacement character setting unless in use for non-space character
+* Change: Capitalize each word in tags sent to Twitter (accessibility)
+
+= 3.3.6 =
+
+* Bug fix: Check for existing short URL should not run when parsing text of Tweets for URLs.
+
+= 3.3.5 =
+
+* Bug fix: Assignment replaced with comparison in connection creation.
+
+= 3.3.4 =
+
+* Bug fix: fallback normalizer method called incorrectly
+
+= 3.3.3 =
+
+* Removed: upgrade paths from version 2.4.x
+* Removed: support for YOURLS version 1.3
+* Removed: support for Twitter Friendly Links (plug-in not updated in 8 years)
+* Removed: Ability to enable the Goo.gl URL shortener (see: https://developers.google.com/url-shortener/)
+* Removed: fallback functions required for PHP 4 support.
+* Add 'show images' as option in feeds.
+* Support for alt attributes displayed in Feeds
+* Improved URL generation to link to searched Tweets.
+* Improve parsing of URLs in Tweets.
+* Don't save URLs if no shortener used or shortener returns no value.
+* Option to ignore stored URLs when sending Tweets.
+* Code now conforms with WordPress PHP standards with the exception of four deprecated functions.
+
+= 3.3.2 =
+
+* If short URL already stored, do not execute shortening routine
+* Remove instances of create_function for PHP 7.2 compat
+* Remove language files completely in favor of WordPress.org translations
+* CSS fix
+* Minor text changes
+
+= 3.3.1 =
+
+* Add temporary method to extend character count. Twitter has not yet released their new character counting library.
+* Minor style changes
+
+= 3.3.0 =
+
+* Bug fix: Fix arguments when using keywords with YOURLS
+* Bug fix: Problem saving settings in PHP 7.1 due to array assignment changes
+* New: Add filter to provide custom support any taxonomy as hashtags, 'wpt_hash_source' & 'wpt_hash_tag_sources'
+* New: Add cache refresh checkbox for Tweet widget
+* Update: Rewritten debugging mechanism
+* New: admin notice to indicate in debugging.
+* Remove Freemius (with all thanks to the Freemius team.)
+* Minor tweaks to Tweet widget CSS
+
+= 3.2.19 =
+
+* Bug fix: account for mixed return values in get_the_tags()
+
+= 3.2.18 =
+
+* Bug fix: Only save last Tweet if sent successfully (See https://wordpress.org/support/topic/character-count-not-updating-and-subsequent-tweets-not-going-through/#post-9338623)
+* Bug fix: in truncation settings, match displayed tag names to tags used in templates.
+* Text fixes: clarify YOURLS settings notices & fields
+* Add option: Hash tags from categories instead of tags
+* Bug fix: incorrect url
+
+= 3.2.17 =
+
+* Function name change in primary function. 
+* Early exit in wpt-feed
+* Fix icon in metabox headings
+* Misc. minor design tweaks
+
+= 3.2.16 =
+
+* Bug fix: missing check to verify array caused AJAX error
+
+= 3.2.15 =
+
+* Bug fix: "Tweet Now" button threw error if selecting main site account [Pro]
+* New action executed when posting to Twitter
+* New debugging point in media retrieval
+
+= 3.2.14 =
+
+* Bug fix: activation status of licenses in WP Tweets Pro misreported in support data
+* Removed longurl.org expander since the service has been shut down.
+* Exclude uploaded media URLs from character counting (WP Tweets Pro)
+* Feature: Support adding custom templates for specific taxonomy terms (WP Tweets Pro)
+
+= 3.2.13 =
+
+* Bug fix: help/config should not be queried if user has not yet authenticated.
+
+= 3.2.12 =
+
+* Bug fix: call help/config to check t.co URL lengths and make sure length used is current value
+* Parse URLs in text and send to URL shortener before Tweeting.
+* Test for WordPress 4.6
+
+= 3.2.11 =
+
+* Two new filters in post meta box
+* Add option to set your own Goo.gl API key for improved shortener reliability
+* Removed my fallback functions for mb_substr and mb_strlen & support for WordPress 4.1
+* Fixed a broken URL
+* Updated sales copy
+
+= 3.2.10 =
+
+* Bug fix: extra closing `p` tag in widget output.
+* Feature: pattern for getting arbitrary author meta: {{meta_field}}
+* Minor security fix: ignored wpnonce verification if nonce not provided in settings admin.
+
+= 3.2.9 =
+
+* Bug fix: extra is_admin call in Freemius implementation
+* Feature: 'Tweet Now' & dynamic scheduling recognizes currently selected users & upload media status (Pro)
+
+= 3.2.8 =
+
+* Bug fix: Stray debugging email in curl processing.
+
+= 3.2.7 =
+
+* Feature: prevent Duplicate Posts plug-in from copying WP to Twitter meta data
+* Feature: add curl fallback in case WP_http doesn't function correctly.
+* Feature: support for image alt attributes in widget
+* Feature: support for selective refresh in customizer
+* Feature: improved error messages from Twitter
+* Change: added Freemius service back to plug-in
+* Bug fix: disconnect Twitter account in user accounts (PRO)
+
+= 3.2.6 =
+
+* Bug fix: wrap Twitter follow button in div to prevent obscure Blink rendering bug.
+* Bug fix: obscure bug saving incorrect short URL when saving draft
+
+= 3.2.5 =
+
+* Bug fix: added prefix to is_valid_url (function used by some other plug-ins)
+* Bug fix: undismissable promotion for WP Tweets PRO
+* Minor style changes
+
+= 3.2.4 =
+
+* Bug fix: functionalized uninstall, but placed in file only imported while WPT active.
+
+= 3.2.3 =
+
+* Remove Freemius integration due to excessive API load.
+
+= 3.2.2 =
+
+* Only call Freemius integration in admin.
+
+= 3.2.1 =
+
+* Bug fix: uninstall issue with Freemius
+* Bug fix: extraneous function call with Freemius
+* More style streamlining
+
+= 3.2.0 =
+
+* Bug fix: if user without permissions to edit WP to Twitter meta updated profiles, Twitter profile data was deleted.
+* Bug fix: PHP notices (2) in Twitter search widget
+* Bug fix: no notice to update settings when setting new URL shortener.
+* Bug fix: permissions tabs non functional if custom role name had a space
+* Bug fix: remove notice thrown when rate limiting is run on a Tweet not associated with a post
+* Bug fix: remove notice thrown when no error defined by custom shortener.
+* Design update in metabox panel
+* Misc. design & text updates
+* Ability to add new URL shorteners via filters ('wpt_shorten_link', 'wpt_shortener_settings', 'wpt_choose_shortener')
+* Remove ability to set YOURLS as a local resource in new installs
+* Added filter to disable storing URLs in post meta
+* Deprecate more old jd_ prefixed functions
+* Change admin page URL to match Pro version.
+* Remove dependency on is_plugin_active()
+* Added opt-in usage tracking via Freemius.com
+
+= 3.1.9 =
+
+* CSS update in Twitter feed for new iframe generated follow button
+* Include target URL in information deleted when a post's Tweet History cleared
+* Minor design changes
+* Updated manual
+* Updated text
 
 = 3.1.8 =
 
@@ -211,9 +477,13 @@ Translating my plug-ins is always appreciated. Work on WP to Twitter translation
 
 Right here: [WP to Twitter FAQ](http://www.joedolson.com/wp-to-twitter/support-2/). I don't maintain them here because I would prefer to only maintain one copy. This is better for everybody, since the responses are much more likely to be up to date!
 
+= Twitter's Application creation process is very difficult. Why do I have to do this? =
+
+WP to Twitter has always followed the principle that you are the owner of your own application. Many other applications require you to pass your data through a 3rd party that you authenticate to post to Twitter. Twitter has gradually made the process to create a new application more and more difficult. There is nothing I can do about that. 
+
 = How can I help you make WP to Twitter a better plug-in? =
 
-Writing and maintaining a plug-in is a lot of work. You can help me by providing detailed support requests (which saves me time), or by providing financial support, either via my [plug-in donations page](https://www.joedolson.com/donate/) or by [upgrading to WP Tweets Pro](https://www.joedolson.com/wp-tweets-pro/). Believe me, your donation really makes a difference!
+Writing and maintaining a plug-in is a lot of work. You can help me by providing detailed support requests (which saves me time), or by providing financial support, either via my [plug-in donations page](https://www.joedolson.com/donate/) or by [upgrading to WP Tweets Pro](http://www.wptweetspro.com/wp-tweets-pro). Believe me, your donation really makes a difference!
 
 == Screenshots ==
 
@@ -226,4 +496,4 @@ Writing and maintaining a plug-in is a lot of work. You can help me by providing
 
 == Upgrade Notice ==
 
-* 3.1.6 - Rewritten Tweet truncating functions; minor bug fixes.
+* 3.4.0: Removal of functions deprecated in January 2017 & March 2018. May break older Pro installations.
