@@ -23,6 +23,7 @@
 	// Sidebar Widget
 	// Location: the sidebar
 	register_sidebar(array('name'=>'Sidebar',
+		'id' => 'sidebar-1',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '<h3>',
@@ -33,6 +34,7 @@
 	// Sidebar Widget - Home
 	// Location: the sidebar
 	register_sidebar(array('name'=>'Sidebar - Home',
+		'id' => 'sidebar-2',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '<h3>',
@@ -42,6 +44,7 @@
 	// Sidebar Widget - Footer
 	// Location: the sidebar
 	register_sidebar(array('name'=>'Footer - Description',
+		'id' => 'sidebar-3',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '<h3>',
@@ -51,6 +54,7 @@
 	// Sidebar Widget - Footer
 	// Location: the sidebar
 	register_sidebar(array('name'=>'Footer - Contact',
+		'id' => 'sidebar-4',
 		'before_widget' => '',
 		'after_widget' => '',
 		'before_title' => '<h3>',
@@ -121,10 +125,10 @@
 	}
 	add_filter('excerpt_more', 'custom_excerpt_more');
 	// no more jumping for read more link
-	function no_more_jumping($post) {
+	/*function no_more_jumping($post) {
 		return '<a href="'.get_permalink($post->ID).'" class="read-more">'.'&nbsp; Continue Reading &raquo;'.'</a>';
 	}
-	add_filter('excerpt_more', 'no_more_jumping');
+	add_filter('excerpt_more', 'no_more_jumping');*/
 	
 	// category id in body and post class
 	function category_id_class($classes) {
