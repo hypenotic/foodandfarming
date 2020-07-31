@@ -1,24 +1,6 @@
 <?php
-
-	//include('includes/wp-cuztom-helper/cuztom.php');
-	//Include post custom posts type. Dependent on /wp-cuztom-helper classes.
-	//include('includes/wp-cuztom-posts/custom-post-research.php');
-
 	// enables wigitized sidebars
 	if ( function_exists('register_sidebar') );
-
-	// function add_jquery_tabs(){
-	// 	wp_enqueue_script( 'jquery-ui-tabs' );
-	// }
-	// add_action('wp_enqueue_scripts', 'add_jquery_tabs');
-
-	// function my_styles() {
-	// 	wp_register_style( 'accordion', get_template_directory_uri() . '/dist/css/jquery-ui.css' );
-	// 	wp_enqueue_style( 'accordion' );
-	// }
-
-	// add_action('wp_enqueue_scripts', 'my_styles');
-
 
 	// Sidebar Widget
 	// Location: the sidebar
@@ -207,11 +189,7 @@ function content($limit)
 	add_action('wp_enqueue_scripts','wpexplorer_scripts_function');
 	function wpexplorer_scripts_function() {
 
-	// use Google JS Library
-	 //wp_deregister_script('jquery');
-	 //wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"), false, '1.5.0');
-	 //wp_enqueue_script('jquery');
-	 // SuperFish Scripts
+	
 	}
 
 ?>

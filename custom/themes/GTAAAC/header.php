@@ -54,19 +54,11 @@
   })();
 
 </script>
-<script type='text/javascript'>
-(function (d, t) {
-  var bh = d.createElement(t), s = d.getElementsByTagName(t)[0];
-  bh.type = 'text/javascript';
-  bh.src = '//www.bugherd.com/sidebarv2.js?apikey=9kqjq02mzam69lbcb07mvq';
-  s.parentNode.insertBefore(bh, s);
-  })(document, 'script');
-</script>
+
 <!-- New Stylesheet -->
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/style.css" media="all">
 </head>
 <body <?php body_class(); ?>>
-<!-- <div style="position:absolute;top:-11011px">cartier,zenith,rolex datejust,franck muller,omega,rolex day date,rolex,rolex air king,rolex masterpiece,tissot,tag heuer,montblanc,rolex gmt master,breguet,rolex submariner,<a href="http://kidskonnected.org/replica-watches.php">fake rolex for sale</a>,<a href="http://kidskonnected.org/replica-watches.php">rolex replica</a>,<a href="http://kidskonnected.org/replica-watches.php">fake watches</a></div> -->
 	<header class="clear main-header-clear">
 				<?php if (is_home()) { ?>
 				<section class="block main-header home-header">
@@ -81,10 +73,7 @@
 							<img class="left top logo" src="logo.png">
 						</a>
 				<?php } ?> 					
- 				<!-- <div class="secondary-nav">
-					<?php get_search_form();  ?>
-					<?php //wp_nav_menu( array('menu' => 'Utility Menu', 'container_id' => 'navigation-utility')); ?>
-				</div> -->
+ 				
 		        <div class="main-menu">
 		        	<section class="menu-block">
 					<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
@@ -92,16 +81,4 @@
 		        </div>
 			</div>
 		</section> 
-		<div class="overlay overlay-slidedown">
-	    	<div class="search-error-page">
-				<form role="search" method="get" class="search-form-error big-search" action="<?php echo home_url( '/' ); ?>">
-					<label>
-						<input type="search" class="search-field big-search" placeholder="<?php echo esc_attr_x( 'What are you looking for?', 'placeholder' ) ?>" value="<?php echo get_search_query() ?>" name="s" title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>" />
-					</label>
-					<input type="submit" class="error-submit big-search" value="<?php echo esc_attr_x( 'Search', 'submit button' ) ?>" />
-				</form>
-	    	</div>
-			<button class="overlay-close"></button>
-		</div>
-		<div id="trigger-overlay"></div>
 	</header>
