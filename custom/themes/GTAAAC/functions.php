@@ -75,9 +75,6 @@
 	// adds Post Format support
 	// learn more: http://codex.wordpress.org/Post_Formats
 	add_theme_support( 'post-formats', array( 'aside', 'gallery','link','image','quote','status','video','audio','chat' ) );
-
-	// removes detailed login error information for security
-	add_filter('login_errors',create_function('$a', "return null;"));
 	
 	// Removes Trackbacks from the comment cout
 	add_filter('get_comments_number', 'comment_count', 0);
