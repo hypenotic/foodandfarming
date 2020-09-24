@@ -1,4 +1,7 @@
 <?php
+
+	include('metabox/cpt-report.php');
+
 	// enables wigitized sidebars
 	if ( function_exists('register_sidebar') );
 
