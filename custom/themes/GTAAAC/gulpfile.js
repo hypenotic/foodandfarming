@@ -6,7 +6,6 @@ var gulp          = require('gulp'),
     imagemin      = require('gulp-imagemin'),
     pngquant      = require('imagemin-pngquant'),
     livereload    = require('gulp-livereload'),
-    notify        = require('gulp-notify'),
     autoprefixer  = require('gulp-autoprefixer'),
     jshint        = require('gulp-jshint');
     minifyCss     = require('gulp-minify-css');
@@ -37,7 +36,6 @@ gulp.task('imagemin', function () {
             use: [pngquant()]
         }))
         .pipe(gulp.dest(outputDir + '/images'))
-        .pipe(notify("image task finished"));
 });
 
 // Create js scripts concat and minify task.
@@ -45,11 +43,9 @@ gulp.task('js', function() {
   return gulp.src(scriptList)
     // .pipe(jshint('.jshintrc'))
       .pipe(jshint.reporter('default'))
-    .pipe(plumber({errorHandler: notify.onError("Error: <%= error.message %>")}))
       .pipe(uglify('app.min.js', {outSourceMap: true}))
       .pipe(gulp.dest(outputDir + '/js'))
       .pipe(livereload())
-      .pipe(notify("js task finished"));
 });
 
 
@@ -61,13 +57,12 @@ gulp.task('sass', function() {
     .pipe(minifyCss())
     .pipe(gulp.dest(outputDir + '/css'))
     .pipe(livereload())
-    .pipe(notify("sass task finished"));
 }); 
 
 // Create fonticons compile task
-gulp.task('icons', function() { 
-    return gulp.src(fontIcons) 
-        .pipe(gulp.dest(outputDir + '/fonts')); 
+gulp.task('icons', function() {
+    return gulp.src(fontIcons)
+        .pipe(gulp.dest(outputDir + '/fonts'));
 });
 
 // Create watch task
