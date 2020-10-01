@@ -59,26 +59,43 @@
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/dist/css/style.css" media="all">
 </head>
 <body <?php body_class(); ?>>
-	<header class="clear main-header-clear">
-				<?php if (is_home()) { ?>
-				<section class="block main-header home-header">
-					<div class="main-header-wrapper">
-						<a href="<?php echo get_option('home'); ?>">
-							<img class="left top logo" src="logo-nobyline.png">
-						</a>
-				<?php } else { ?> 	
-				<section class="block main-header">
-					<div class="main-header-wrapper">
-						<a href="<?php echo get_option('home'); ?>">
-							<img class="left top logo" src="logo.png">
-						</a>
-				<?php } ?> 					
- 				
-		        <div class="main-menu">
-		        	<section class="menu-block">
-					<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
-		            </section>
-		        </div>
+
+<header>
+	<div class="wrapper">
+		<div class="nav-wrapper">
+			<a href="<?php echo get_option('home'); ?>"><img class="logo" src="logo.png"></a>
+			<nav>
+				<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'main-nav'));	?>
+			</nav>
+		</div>
+	</div> <!-- Ends .wrapper -->
+</header>
+
+
+<!--
+<header class="site-header">
+  <div class="wrapper site-header__wrapper">
+    <a href="<?php echo get_option('home'); ?>" class="brand"><img class="left top logo" src="logo.png"></a>
+	<nav class="nav"></nav>
+	<?php wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
+  </div>
+</header>
+-->
+
+
+<!--
+<header class="clear main-header-clear">
+	<section class="block main-header">
+		<div class="main-header-wrapper">
+			<a href="<?php //echo get_option('home'); ?>">
+				<img class="left top logo" src="logo.png">
+			</a>
+			<div class="main-menu">
+				<section class="menu-block">
+				<?php //wp_nav_menu( array('theme_location' => 'main-menu', 'container_id' => 'navigation-main'));	?>
+				</section>
 			</div>
-		</section> 
-	</header>
+		</div>
+	</section> 
+</header>
+-->
