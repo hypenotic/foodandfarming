@@ -6,64 +6,6 @@
 	margin: 0;
 	max-width:65%;} 
 
-#navigation-utility ul {
-	float:right;
-	font: 1.1em/1.18181818182em 'Francois One', sans-serif;
-	margin: .5em 0 1.18181818182em 0; 
-	list-style-image: none;
-	padding-top: 65px;}
-
-#navigation-main {
-	max-width: 60.625em;
-	height: 35px;
-	margin: 30px auto;}
-
-
-#navigation-utility li, #navigation-main li {
-	display: inline; }
-	
-#navigation-utility ul li a {
-	text-transform: uppercase;
-	text-decoration:none;  
-	margin: 0;
-	padding: 15px; 
-	color: #696968;}
-
-#navigation-utility ul li a:hover {
-	color: #999997;}
-	
-#navigation-main ul {
-	float:left;
-	font: 1em/1.3em 'Francois One', sans-serif;
-	list-style-image: none;
-	margin: 0.55em 0em 1.3em 0em; }
-	
-#navigation-main ul li a {
-	text-transform: uppercase;
-	text-decoration:none;  
-	margin: 0;
-	padding: 0 .9em 0 .9em;
-	color: #f8f2f2;
-	/*text-shadow: 1px 1px 1px #000;*/
-	/*-moz-text-shadow: 1px 1px 1px #000;*/
-	/* For IE 8 */
-	/*-ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000')";*/
-	/* For IE 5.5 - 7 */
-	/*filter: progid:DXImageTransform.Microsoft.Shadow(Strength=1, Direction=135, Color='#000000');*/}
-
-#navigation-main ul li a:hover, #navigation-main ul li a:active {
-	color: #504343;
-	background: #b99f91;
-	text-align: center;
-	text-shadow: none;
-	-webkit-border-radius: .3em; 
-	-moz-border-radius: .3em;
-	border-radius: .3em;
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.1);
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
-}
-
 
 aside {
   float: right;
